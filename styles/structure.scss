@@ -1,0 +1,100 @@
+/* Rank page */
+.cnto-page-rank {
+  .basic-responsabilities ul {
+    font-size: 110%;
+    line-height: 1.75;
+  }
+}
+
+.community-layers {
+  display: table;
+  width: 100%;
+
+  .layer {
+    display: table-row;
+    background: #EDE5CB;
+    border-bottom: 1px solid #fff;
+
+    .name,
+    .description {
+      display: table-cell;
+      padding: .5em;
+      vertical-align: middle;
+    }
+    .name {
+      width: 25%;
+      text-align: center;
+      font-size: 150%;
+      line-height: 1.5;
+      background: $primary-color;
+      color: #fff;
+      &:hover{
+        text-decoration: none;
+        background: $alternative-color;
+        transition: background .5s;
+        cursor: pointer;
+      }
+
+      .description{
+        width: 75%;
+        text-align: left;
+        *:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Rank presentation */
+.rank {
+  header {
+    margin: 0 0 2em;
+
+    h2 {
+      display: inline-block;
+      margin: 0;
+      padding: 3px 5px;
+      font-size: 130%;
+      font-weight: normal;
+      background: $primary-color;
+      line-height: 25px;
+    }
+
+    .name {
+      padding: .25em;
+      font-size: 120%;
+      color: #fff;
+    }
+
+    .tag {
+      background: #fff;
+      color: #333;
+      display: block;
+      float: right;
+      padding: 0 .5em;
+      margin-left: .5em;
+      line-height: 25px;
+      font-size: 90%;
+      font-weight: bold;
+      border-radius: 2px;
+    }
+  }
+
+  .content {
+    padding-left: 225px;
+    line-height: 1.5;
+    background-position: 25px 0;
+    background-repeat: no-repeat;
+    background-size: 150px;
+
+    h3, ul, p {
+      margin:  0 0 1em 0;
+    }
+
+    h3 {
+      color: #bd910d;
+    }
+  }
+}
+.rank-grunt .content { @include tag("recruit"); }

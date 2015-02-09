@@ -1,3 +1,10 @@
+$tagsmap: (recruit: 1164126);
+
+@mixin tag($tagname) {
+  background-image: url("http://files.enjin.com/821401/site_user_tags/" + map-get($tagsmap, $tagname) + ".png");
+  background-repeat: no-repeat;
+}
+
 .cnto-page {
   section {
     margin: 1.5em 0;
@@ -12,4 +19,59 @@
   h1, h2, h3 {
     color: $primary-color;
   }
+
+  .page-content.with-nav {
+    margin-right: 20px;
+  }
+
+  .page-nav {
+    position: fixed;
+    top: 200px;
+    right: 50%;
+    margin-right: -302px;
+    h2 {
+      display: none;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      display: block;
+      list-style: none;
+    }
+    a {
+      @include tag("recruit");
+
+      display: block;
+      border-bottom: 1px solid #ccc;
+      background-position: right 5px center;
+      background-size: 20px;
+      padding: 3px 20px 3px 10px;
+      color: #fff;
+      text-decoration: none;
+      line-height: 25px;
+      height: 25px;
+
+      .entry-text {
+        line-height: 25px;
+        display: none;
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      box-shadow: 0 0 2px rgba(0,0,0,.25);
+
+      .entry-text {
+        display: block;
+      }
+    }
+  }
 }
+
