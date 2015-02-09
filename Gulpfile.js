@@ -30,16 +30,17 @@ gulp.task("dist", function(done) {
   options.env = options.env || "production";
   options.minify = true;
 
-  sequence(
+  return sequence(
     "build",
     done
   );
 });
 
 gulp.task("build", function(done) {
-  sequence(
+  return sequence(
     "clean",
     ["styles", "scripts", "html"],
+    "watch",
     done
   );
 });
@@ -51,12 +52,13 @@ gulp.task("server", ["build"], function(done) {
   }));
 });
 
-//gulp.task("livereload", function() {
+gulp.task("watch", function() {
 //  livereload.listen();
 
-//  gulp.watch(dir("styles", "**/*.{sass,scss}"), ["styles"]);
-//  gulp.watch(dir("dist", "**/*")).on("change", livereload.changed);
-//});
+  gulp.watch(dir("styles", "**/*.{sass,scss}"), ["styles"]);
+  gulp.watch(dir("html", "**/*.html"), ["html"]);
+  //gulp.watch(dir("dist", "**/*")).on("change", livereload.changed);
+});
 
 gulp.task("clean", function() {
   return gulp.src(dir("dist"), { read: false }).pipe(clean());
@@ -109,6 +111,7 @@ function buildStyles() {
   var srcDir = dir('styles', 'cnto.scss'),
       destDir = dir('dist', 'styles'),
       sassOptions = {
+        errLogToConsole: true
       },
       sourcemapsInit = options.sourcemaps ? sourcemaps.init() : gutil.noop();
       sourcemapsWrite = options.sourcemaps ? sourcemaps.write() : gutil.noop();
@@ -119,6 +122,7 @@ function buildStyles() {
   return  gulp.src(srcDir)
               .pipe(sourcemapsInit)
               .pipe(sass(sassOptions))
+              .on("error", handleError("sass"))
               .pipe(sourcemapsWrite)
               .pipe(gulp.dest(destDir));
 }
@@ -132,7 +136,8 @@ function dir(root) {
 function handleError(errSection) {
   return function(err) {
     gutil.log(gutil.colors.bgRed(errSection), err);
-  }
+    this.emit("end");
+  };
 }
 
 

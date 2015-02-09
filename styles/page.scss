@@ -1,0 +1,15 @@
+.cnto-page {
+  section {
+    margin: 1.5em 0;
+    padding: 1px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol, table {
+    margin: 0 0 1em 0;
+  }
+
+  h1, h2, h3 {
+    color: $primary-color;
+  }
+}

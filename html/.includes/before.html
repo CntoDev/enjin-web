@@ -1,1 +1,368 @@
-before
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:fb="http://ogp.me/ns/fb#">
+
+  <head>
+    <script type="text/javascript">
+try {
+  if(self.location.href != top.location.href) {
+    top.location = self.location;
+  }
+} catch ( ex ) {
+  // if we cannot access the top.location.href property then we are not in the top-frame, so reload till we are
+  top.location = self.location;
+}
+    </script>
+
+    <meta name="description" content="" >
+    <meta name="keywords" content="" >
+    <meta name="robots" content="INDEX, FOLLOW" >
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgYAWVVaGwoIVlhSDw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:19,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:19,2:20,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:20,2:19,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:20,2:19,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:20,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&u&&u.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=l.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document,f="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};u[f]?(u[f]("DOMContentLoaded",o,!1),c[f]("load",n,!1)):(u[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:18,handle:"D5DuLP"}],18:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],19:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],20:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:19,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+    <meta http-equiv="Content-Language" content="en-US" ><title>Roster - CNTO Member Roster</title>
+    <!--OpenGraph Protocol-->
+    <meta property="og:title" content="Carpe Noctem" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://carpenoctem-arma.enjin.com" />
+    <meta property="og:image" content="http://files.enjin.com.s3.amazonaws.com/821401/site_logo/avatar.png" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Carpe Noctem - Tactical Operations" />
+
+
+
+
+
+    <link href="/roster" rel="canonical" >
+    <link href="http://resources.guild-hosting.net/201502061191/themes/core/js/library/markitup/skins/enjin/style.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://carpenoctem-arma.enjin.com/assets/201502061191/themes/core/css/core.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://resources.guild-hosting.net/201502061191/themes/core/css/bbcode.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://resources.guild-hosting.net/201502061191/themes/core/css/styles.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://resources.guild-hosting.net/201502061191/themes/v2/css/system/user_tray.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://resources.guild-hosting.net/201502061191/admin/theme/css/teamspeak/tree.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://resources.guild-hosting.net/201502061191/themes/core/css/modules/mumble.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://carpenoctem-arma.enjin.com/assets/201502061191/merged/default_fonts.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://carpenoctem-arma.enjin.com/assets/201502061191/themes/core/css/theme.php?theme=515079&amp;cache=201502061191-1423056251" media="screen" rel="stylesheet" type="text/css" >
+    <link href="http://resources.guild-hosting.net/201502061191/themes/core/css/widthbugfix.css" media="screen" rel="stylesheet" type="text/css" >	<style type="text/css" media="screen">
+<!--
+
+-->
+    </style>
+    <style type="text/css" media="screen">
+<!--
+a.tag-regular,span.tag-regular{} a.tag-admin,span.tag-admin{color: #d61313 !important;} a.tag-untagged,span.tag-untagged{} a.tag-banned,span.tag-banned{color: #e37e12 !important;} a.tag-online,span.tag-online{} a.tag-ts3online,span.tag-ts3online{} a.tag-minecraft_online,span.tag-minecraft_online{} a.tag-warned,span.tag-warned{} a.tag-punished,span.tag-punished{} a.tag-1164267,span.tag-1164267{color: #e37e12 !important;} a.tag-1287720,span.tag-1287720{color: #e37e12 !important;} a.tag-1220615,span.tag-1220615{} a.tag-1208897,span.tag-1208897{} a.tag-1220602,span.tag-1220602{} a.tag-1316392,span.tag-1316392{} a.tag-1257703,span.tag-1257703{} a.tag-1304215,span.tag-1304215{} a.tag-1304214,span.tag-1304214{} a.tag-1185027,span.tag-1185027{} a.tag-1287327,span.tag-1287327{} a.tag-1304219,span.tag-1304219{} a.tag-1184729,span.tag-1184729{} a.tag-1304209,span.tag-1304209{} a.tag-1304216,span.tag-1304216{} a.tag-1304218,span.tag-1304218{} a.tag-1183915,span.tag-1183915{} a.tag-1304194,span.tag-1304194{} a.tag-1172933,span.tag-1172933{} a.tag-1304217,span.tag-1304217{} a.tag-1173527,span.tag-1173527{} a.tag-1164261,span.tag-1164261{} a.tag-1173495,span.tag-1173495{} a.tag-1164126,span.tag-1164126{color: #26ad45 !important;} a.tag-1164127,span.tag-1164127{color: #26ad45 !important;} a.tag-1165093,span.tag-1165093{color: #26ad45 !important;} a.tag-1165134,span.tag-1165134{color: #26ad45 !important;} a.tag-1164128,span.tag-1164128{color: #26ad45 !important;} a.tag-1164131,span.tag-1164131{color: #2e20f5 !important;} a.tag-1164132,span.tag-1164132{color: #b80000 !important;} a.tag-1164133,span.tag-1164133{color: #b80000 !important;} a.tag-1164134,span.tag-1164134{color: #b80000 !important;}
+-->
+    </style>	<script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/merged/default_layout.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/core.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/system/pusher.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/markitup/sets/bbcode/set.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/date.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/json.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/jquery.idletimer.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/jstorage.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/themes/core/js/library/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="http://resources.guild-hosting.net/201502061191/merged/messaging.js"></script>
+    <script type="text/javascript">
+//<!--
+
+Enjin_Core.punishments.ajaxLoader = 'http://resources.guild-hosting.net/201502061191/themes/core/images/loader.gif';
+Enjin_Core.warnings.ajaxLoader = 'http://resources.guild-hosting.net/201502061191/themes/core/images/loader.gif';
+
+
+Enjin_Messaging_Tray.resource_asmselect = 'http://resources.guild-hosting.net/201502061191/themes/core/js/library/jquery.asmselect.js';
+Enjin_Messaging_Tray.resource_bbcode = [
+'http://resources.guild-hosting.net/201502061191/themes/core/js/library/markitup/jquery.markitup.js',
+'http://resources.guild-hosting.net/201502061191/themes/core/js/library/markitup/sets/bbcode/set.js'
+];
+
+Enjin_Messaging_Tray.resource_bbcode_css =  'http://resources.guild-hosting.net/201502061191/themes/core/js/library/markitup/skins/enjin/style.css';
+Enjin_Messaging_Tray.resource_fileuploader = 'http://resources.guild-hosting.net/201502061191/themes/core/js/library/fileuploader.js';
+
+$(document).ready(function(){
+  var messaging_options = {
+    goOnline: false,
+      //crosshtml: 'http://www.enjin.com/chat/postmessage',
+      crosshtml: 'http://www.enjin.com/chat/postmessage',
+      userId: 12341103            };
+
+      Enjin_Messaging_Pusher.channel_user_name = 'ppublic-user12341103.5eda24a7e4e690b3be2791947c5f965e';
+      Enjin_Messaging_Pusher.site_id = '821401';
+      Enjin_Messaging_Pusher.channel_site_name = 'presence-site821401';
+      Enjin_Messaging_Tray.site_id = '821401';
+      Enjin_Messaging_Tray.myself_status = 'online';
+      Enjin_Messaging.init(messaging_options);
+      Enjin_Messaging_Tray.setPrivateRequests({});
+
+      Enjin_Messaging_Tray.setSounds(1, {
+        1: 'http://resources.guild-hosting.net/201502061191/themes/core/sound/chat.wav',
+          2: 'http://resources.guild-hosting.net/201502061191/themes/core/sound/chat-loud.wav',
+          3: 'http://resources.guild-hosting.net/201502061191/themes/core/sound/chat-soft.wav'
+      });
+}); //init in "background"
+
+//-->
+    </script>
+    <script type="text/javascript">
+//<!--
+
+var current_session_user_id = 12341103;
+Enjin_Core.site_id = 821401;
+
+//-->
+    </script>
+    <script type="text/javascript">
+//<!--
+var notification_count = {
+  messages: 0,
+    general: 0,
+    apps: 0					};
+    $(document).ready(function(){
+    });
+//-->
+    </script>
+
+    <!-- Universal Google Analytics -->
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// enjin tracking
+ga('create', 'UA-6028401-5', 'auto');
+ga('send', 'pageview');
+
+    </script>
+
+  </head>
+
+  <body class=" light-theme"
+        data-dnsme-update-flag="">
+
+
+
+
+
+
+        <div class="body-wrap-2"><div class="body-wrap-3">
+
+            <div id="page">
+              <div class="page-outer-left"><!--  --></div>
+              <div class="page-outer-right"><!--  --></div>
+              <div id="page-wrap">
+                <div id="above-site"><!--  --></div>
+                <div id="site-body">
+
+                  <div><table class="section-collection"><tr class="top">
+                        <td class="section-border"><div class="decorator-box"></div></td>
+                        <td id="section-header"
+                            class="section-holder section-width-large"
+                            style=""
+                            data-width="1030"
+                            >
+                            <div class="section">	<div id='enjin-bar' data-user_id='12341103'>
+                                <div class='right'><a href='/dashboard/messages' id='mail-icon-link' style='display: none;'><div class='mail-icon'></div></a>
+                                  <div class="mini-avatar"><div  class="element_avatar simple tiny"><a  data-minitooltip="Cezar" data-minitooltip-userid="12341103" href="http://carpenoctem-arma.enjin.com/profile/12341103"><img src="http://assets-cloud.enjin.com/users/12341103/avatar/tiny.1420295219.jpeg" onerror="this.src='http://resources.guild-hosting.net/201502061191/profile/images/avatar/tiny.png';" width="16" height="16"></a></div></div><span class='user'>
+                                    <a href='/profile/12341103' onmouseover="Enjin_Core.dropdownMenu([[$('#enjinbar-content-loggedin').html(),'html'],['','divider'],[$('#enjinbar-content-menu').html(),'html'],[$('#enjinbar-content-usersites').html(),'html']], $(this), 'enjinbar-menu enjinbar-menu-user', true, 0, 0);">
+                                      <span class="element_username tag-1164127">Cezar</span>     </a>
+                                  </span>
+                                  <span class="arrow"></span><div id='enjinbar-content-loggedin'>
+                                    <div class='userbox'>
+                                      <div class='avatar'><div  class="element_avatar simple medium"><a  data-minitooltip="Cezar" data-minitooltip-userid="12341103" href="http://carpenoctem-arma.enjin.com/profile/12341103"><img src="http://assets-cloud.enjin.com/users/12341103/avatar/medium.1420295219.jpeg" onerror="this.src='http://resources.guild-hosting.net/201502061191/profile/images/avatar/medium.png';" width="43" height="43"></a></div></div>
+                                      <div class='username'><a href='/profile/12341103'  class='element_username tag-1164127'>Cezar</a> </div>
+                                      <a class='logout' href='/logout'>Logout</a>
+                                    </div>
+                                  </div>
+
+
+                                  <div id='enjinbar-content-menu'>
+                                    <ul class='menu-block content-menu'>
+                                      <li class='item item-activity'><div class='icon'></div><a href='/dashboard'>News Feed</a><div class='info'>View a feed of your recent news and activity.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-messages'><div class='icon'></div><a href='/dashboard/messages'>Messages</a><div class='info'>View your incoming messages and write to your friends and communities.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-applications'><div class='icon'></div><a href='/dashboard/applications'>Applications</a><div class='info'>View your own applications and incoming applications to websites you admin.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-characters'><div class='icon'></div><a href='/dashboard/characters'>My Characters</a><div class='info'>Add and show off your characters.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-games'><div class='icon'></div><a href='/dashboard/games'>My Games</a><div class='info'>Add and show off your games, discover new games, see what games are popular right now.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-recruitment'><div class='icon'></div><a href='/dashboard/recruitment'>Recruitment</a><div class='info'>Find guilds and clans looking for members, or recruit people to your own team.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-friends'><div class='icon'></div><a href='/dashboard/friends'>Friends</a><div class='info'>Manage your friends and block lists. You can also invite friends from other popular services.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-subscriptions'><div class='icon'></div><a href='/dashboard/subscriptions'>Subscriptions</a><div class='info'>Manage your subscribed threads and shop items.<div class='rtri'><div></div></div></div></li>
+                                      <li class='item item-settings'><div class='icon'></div><a href='/dashboard/settings'>Account Settings</a><div class='info'>Change your email, password, and website account settings.<div class='rtri'><div></div></div></div></li>
+                                    </ul>
+                                  </div>
+
+                                  <div id='enjinbar-content-usersites'>
+                                    <div class='siteinfobox'><div class='menu-divider-line'></div><a class='more-sites' href='/profile/12341103/communities'>more &raquo;</a><div class='site'><a rel='nofollow' href='http://www.enjin.com/forums'>Enjin Forums</a></div><div class='site'><a rel='nofollow' href='http://carpenoctem-arma.enjin.com'>Carpe Noctem - Tactical Operations</a></div></div>
+                                  </div>		</div>
+
+                                  <div class='left'>
+                                    <a href='/'>Carpe Noctem - Tactical Operations</a><span class='divider'>|</span><a href='/page/821401'>Site Info</a><div id='enjin-bar-likes'><span class="fb-like-site"><fb:like href="http://carpenoctem-arma.enjin.com" send="false" layout="button_count" width="100" show_faces="false"></fb:like></span><span class="gplus-like-site"><g:plusone size="medium" href="http://carpenoctem-arma.enjin.com"></g:plusone></span><a href="https://twitter.com/share" class="twitter-share-button twitter-like-site" data-url="http://carpenoctem-arma.enjin.com"></a>						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                      <div id='enjin-like-site'>
+                                        <a href='javascript:void(0);' onclick='Enjin_Core.enjinLikeSite(this);' class='' id='enjin-like-site-button' title='Like this website'></a>
+                                        <span class='likes'>+<span>20</span></span>
+                                      </div>
+                                    </div>		</div>
+                              </div>		      <div class="container_spacer first">
+                                <div class="left"><!--  --></div>
+                                <div class="right"><!--  --></div>
+                              </div><div class='clearing'><!--  --></div>
+
+                              <div class="special_container with-header with-footer first"><div class='m_header'>
+                                  <div class='tl'></div><div class='tr'></div><div class='bl'></div><div class='br'></div>
+
+                                  <div style="height: 300px" class='holder'>
+                                    <object wmode="transparent" width="100%" height="300" flashvars="crossdomain=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2Fcrossdomain.xml&resourcesdomain=http%3A%2F%2Fcarpenoctem-arma.enjin.com%2Fassets%2F201502061191%2Fcrossdomain.xml&fontsbaseurl=http%3A%2F%2Fcarpenoctem-arma.enjin.com%2Fassets%2F201502061191%2Fheaders%2Ffonts&bgtype=image&bgcolor=0&alignment=center&height=300&numitems=0&bgtransparent=1&bg=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2F821401%2Fmodule_header%2F26639473%2Fbackground%2F1411636955-websiteowlbanner.png" data="http://resources.guild-hosting.net/201502061191/themes/core/flash/header/v3/EnjinHeader.swf" type="application/x-shockwave-flash">
+                                      <param name="movie" value="http://resources.guild-hosting.net/201502061191/themes/core/flash/header/v3/EnjinHeader.swf">
+                                      <param name="wmode" value="transparent">
+                                      <param name="allowscriptaccess" value="always">
+                                      <param name="bgcolor" value="#000000">
+                                      <param name="scale" value="noscale">
+                                      <param name="flashvars" value="crossdomain=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2Fcrossdomain.xml&resourcesdomain=http%3A%2F%2Fcarpenoctem-arma.enjin.com%2Fassets%2F201502061191%2Fcrossdomain.xml&fontsbaseurl=http%3A%2F%2Fcarpenoctem-arma.enjin.com%2Fassets%2F201502061191%2Fheaders%2Ffonts&bgtype=image&bgcolor=0&alignment=center&height=300&numitems=0&bgtransparent=1&bg=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2F821401%2Fmodule_header%2F26639473%2Fbackground%2F1411636955-websiteowlbanner.png">
+                                    </object>
+                                  </div>
+
+                                </div></div>
+
+
+                                <div class="container_spacer">
+                                  <div class="left"><!--  --></div>
+                                  <div class="right"><!--  --></div>
+                                </div><div class='clearing'><!--  --></div>
+
+                                <div class="special_container with-header with-footer last"><div class='m_hmenu'>
+                                    <div class='bg left'><!--  --></div>
+                                    <div class='bg right'><!--  --></div>
+                                    <div class='buttons content'>
+                                      <a href='/home'>
+                                        <div class='button first'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Home</div>
+                                        </div>
+                                      </a>
+                                      <a href='/forum'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Forums</div>
+                                        </div>
+                                      </a>
+                                      <a href='/events'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Events</div>
+                                        </div>
+                                      </a>
+                                      <a href='/recruitment'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Join Us</div>
+                                        </div>
+                                      </a>
+                                      <a href='/roster'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Roster</div>
+                                        </div>
+                                      </a>
+                                      <a href='/members'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>All Members</div>
+                                        </div>
+                                      </a>
+                                      <a href='/about'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>About Us</div>
+                                        </div>
+                                      </a>
+                                      <a href='/donate'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Donate</div>
+                                        </div>
+                                      </a>
+                                      <a href='/gallery'>
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Gallery</div>
+                                        </div>
+                                      </a>
+                                      <a href='/home' onmouseover="Enjin_Core.dropdownMenu([['Event Feedback','/feedback',0],['Grunt Qualification','/qualification',0],['Rank / Branch Application','/promotions',0]], $(this).children('.button'));">
+                                        <div class='button'>
+                                          <div class='b left'><!--  --></div>
+                                          <div class='b right'><!--  --></div>
+                                          <div class='b content'>Forms <span>&#9660;</span></div>
+                                        </div>
+                                      </a>
+                                      <div class='cap'><!--  --></div>    </div>
+                                  </div></div>
+
+
+                                  <div class="container_spacer last">
+                                    <div class="left"><!--  --></div>
+                                    <div class="right"><!--  --></div>
+                                    <div class="middle"><!--  --></div>
+                                  </div>
+                                  <div class='clearing'><!--  --></div>
+                            </div><!-- .section -->
+                        </td>
+                        <td class="section-border"><div class="decorator-box"></div></td>
+                      </tr>
+                    </table><!-- .section-collection -->
+                  </div><!-- -->
+                  <div><table class="section-collection"><tr class="top">
+                        <td class="section-border"><div class="decorator-box"></div></td>
+                        <td id="section-main"
+                            class="section-holder section-width-large"
+                            style=""
+                            data-width="810"
+                            >
+                            <div class="section">		      <div class="container_spacer first">
+                                <div class="left"><!--  --></div>
+                                <div class="right"><!--  --></div>
+                              </div><div class='clearing'><!--  --></div>
+
+
+                              <div class="container with-header with-footer first last" data-container-id="35771124" data-start-collapsed="0">
+
+                                <div class="container_header">
+                                  <div class="left"></div>
+                                  <div class="right"></div>
+                                  <div class="title">
+                                    <span class="mask">
+                                      <div class="text">
+                                        <div class="header_text_text">
+
+                                          Roster                                    </div>
+                                      </div>
+                                    </span>
+                                  </div><!-- .title -->
+                                </div>
+
+                                <div class="container_body">
+
+                                  <div class="container_left"><!--  --></div>
+                                  <div class="container_right"><!--  --></div>
+                                  <div class="container_left_top"><!--  --></div>
+                                  <div class="container_right_top"><!--  --></div>
+                                  <div class="container_left_bottom"><!--  --></div>
+                                  <div class="container_right_bottom"><!--  --></div>
+
+                                  <div class="container_content container-minimized" style="display: none;" >
+                                    Container minimized. <a href="#">Expand</a>
+                                  </div>
+                                  <div class="container_content container-maximized"  >
+                                    <div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+                                      <tr class="container_table_row">
+                                        <td class="container_column leftmost rightmost" style="width: 100%">
+                                          <div class="module module_first module_last">
+                                            <div class="module_content">
+                                              <div class="module_content_wrap">
+                                                <div class='m_html' >
+
