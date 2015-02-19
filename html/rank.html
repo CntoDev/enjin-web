@@ -1,52 +1,78 @@
 @@include(".includes/before.html")
 
 <link rel="stylesheet" type="text/css" href="/styles/cnto.css">
+<script src="/scripts/cnto.js"></script>
+
 <div class="cnto-page-rank cnto-page">
   <div class="page-nav">
     <h2>Quick navigation</h2>
     <ul>
-      <li><a class="rank-grunt" href="#rank-nco"><strong class="entry-text">Rank: Recruit</strong></a></li>
-      <li><a class="rank-grunt" href="#rank-nco"><strong class="entry-text">Rank: Grunt</strong></a></li>
+      <li><a class="tag-recruit" href="#rank-recruit"><strong class="entry-text">Rank: Recruit</strong></a></li>
+      <li><a class="tag-grunt" href="#rank-grunt"><strong class="entry-text">Rank: Grunt</strong></a></li>
+      <li><a class="tag-spc" href="#rank-spc"><strong class="entry-text">Rank: Specialist</strong></a></li>
+      <li><a class="tag-jrnco" href="#rank-jrnco"><strong class="entry-text">Rank: JrNCO</strong></a></li>
+      <li><a class="tag-nco" href="#rank-nco"><strong class="entry-text">Rank: NCO</strong></a></li>
+      <li><a class="tag-interviewer" href="#branch-interviewer"><strong class="entry-text">Branch: Interviewer</strong></a></li>
     </ul>
   </div>
+
   <div class="page-content with-nav">
   <section class="community-overview">
     <h1>Community Overview</h1>
 
     <ul class="community-layers">
       <li class="layer">
-        <a class="name" href="#rank-nco">
+        <a class="name" href="#rank-co">
           Officers: <br />
           CO, XO, SNCO
-          <br />asdfasdf<br />asdfasdf
         </a>
         <div class="description">
           <ul>
             <li>Develop ideas to improve the community</li>
             <li>Manage the community as a whole</li>
             <li>Are head of one organisational branch</li>
+            <li>Share equal voting rights on final decisions</li>
         </div>
       </li>
 
       <li class="layer">
-        <a class="name" href="#rank-grunt">
+        <a class="name" href="#rank-nco">
           NCOs
         </a>
         <div class="description">
           <ul>
-            <li>Develop ideas to improve the community</li>
-            <li>Develop ideas to improve the community</li>
-            <li>Manage the community as a whole</li>
             <li>Are head of one organisational branch</li>
-            <li>Manage the community as a whole</li>
-            <li>Are head of one organisational branch</li>
+            <li>Do minor administration work</li>
+            <li>Mange and guide the JrNCO's</li>
         </div>
       </li>
 
+      <li class="layer">
+        <a class="name" href="#rank-jrnco">
+          JrNCOs
+        </a>
+        <div class="description">
+          <ul>
+            <li>Represent the Community Player Base in NCO meetings</li>
+            <li>Manage and guide the Community Player Base</li>
+        </div>
+      </li>
+
+      <li class="layer">
+        <a class="name" href="#rank-spc">
+          Community Player Base: <br />
+          Specialists, Grunts, Recruits
+        </a>
+        <div class="description">
+          <ul>
+            <li>Enjoy the results of branches' work</li>
+            <li>Can contact JrNCOs to relay their concerns or wishes</li>
+        </div>
+      </li>
     </ul>
   </section>
 
-  <section class="basic-responsabilities">
+  <section class="basic-responsabilities" id="basic-responsabilities">
     <h2>Basic responsabilities:</h2>
     <ul id="basic-responsabilities">
       <li>Conduct yourself in accordance with our Rules & Regulations.</li>
@@ -57,7 +83,7 @@
     </ul>
   </section>
 
-  <section class="rank rank-grunt" id="rank-nco">
+  <section class="rank tag-nco" id="rank-nco">
     <header>
       <h2>
         <span class="name">Non Commissioned Officer</span>
@@ -73,7 +99,7 @@
 
       <h3>Duties:</h3>
       <ul>
-        <li><a class="basic-responsabilities">Basic responsabilities</a>.</li>
+        <li><a href="#basic-responsabilities">Basic responsabilities</a>.</li>
         <li>Complete the <a href="#">checklist for recruits</a></li>
         <li>Does the mandatory reading.</li>
         <li>Successfully complete <a href="#">Grunt Qualification Form</a> within 8 weeks of joining community.</li>
@@ -86,7 +112,7 @@
     </div>
   </section>
 
-  <section class="rank rank-grunt" id="rank-grunt">
+  <section class="rank tag-grunt" id="rank-grunt">
     <header>
       <h2>
         <span class="name">Grunt</span>
@@ -111,6 +137,67 @@
       <h3>Privileges:</h3>
       <ul>
         <li>Can attend community events</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rank tag-spc" id="rank-spc">
+    <header>
+      <h2>
+        <span class="name">Specialist</span>
+        <span class="tag">[Spc]</span>
+      </h2>
+    </header>
+    <div class="content">
+      <h3>Prerequisite:</h3>
+      <ul>
+        <li>Has above-average proficiency and familiarity with the game.</li>
+        <li>Has above-average knowledge of how the community works on an organisational level.</li>
+      </ul>
+
+      <h3>Duties:</h3>
+      <ul>
+        <li><a class="basic-responsabilities">Basic responsabilities</a>.</li>
+        <li>Complete the <a href="#">checklist for recruits</a></li>
+        <li>Does the mandatory reading.</li>
+        <li>Successfully complete <a href="#">Grunt Qualification Form</a> within 8 weeks of joining community.</li>
+      </ul>
+
+      <h3>Privileges:</h3>
+      <ul>
+        <li>Can attend community events</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h1>Branches</h1>
+    <p>Being part of any branch helps turning the cogs that are running this community. You will have to be at least the rank of Grunt to apply for any of the branches. When applying for rank promotions we will consider your investment in branch work as a big plus.</p>
+  </section>
+
+  <section class="rank tag-interviewer" id="branch-interviewer">
+    <header>
+      <h2>
+        <span class="name">Interviewer</span>
+      </h2>
+    </header>
+    <div class="content">
+      <h3>Prerequisite:</h3>
+      <ul>
+        <li>Minimum age 21+</li>
+        <li>Has TeamViewer installed</li>
+        <li>Has Arma3Sync troubleshooting knowledge</li>
+        <li>Is online on TS outside of event times as much as possible</li>
+        <li>Is mature and has good people skill</li>
+      </ul>
+
+      <h3>Duties:</h3>
+      <ul>
+        <li>Approach people waiting in the Help Desk channel asap</li>
+        <li>Interview applicants by following the <a href="https://docs.google.com/document/d/1yuRah0arwSkxhJj0rff-EukGpVzgj1HFjdqH6FevSoU">Interview Handbook</a> guidelines</li>
+        <li>Test mods with the applicant after he has downloaded them.</li>
+        <li>Continue to help recruits with their questions as much as possible</li>
+        <li>Help with any technical difficulties, e.g. installing the mo</li>
       </ul>
     </div>
   </section>

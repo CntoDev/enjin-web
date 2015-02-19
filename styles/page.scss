@@ -1,11 +1,27 @@
-$tagsmap: (recruit: 1164126);
 
 @mixin tag($tagname) {
   background-image: url("http://files.enjin.com/821401/site_user_tags/" + map-get($tagsmap, $tagname) + ".png");
   background-repeat: no-repeat;
 }
 
+@mixin tag-classes($suffix: "") {
+  &.tag-recruit #{$suffix}{ @include tag("recruit"); }
+  &.tag-grunt #{$suffix}{ @include tag("grunt"); }
+  &.tag-spc #{$suffix}{ @include tag("spc"); }
+  &.tag-jrnco #{$suffix}{ @include tag("jrnco"); }
+  &.tag-nco #{$suffix}{ @include tag("nco"); }
+  &.tag-co #{$suffix}{ @include tag("co"); }
+  &.tag-xo #{$suffix}{ @include tag("xo"); }
+  &.tag-video #{$suffix}{ @include tag("video"); }
+  &.tag-contributor #{$suffix}{ @include tag("contributor"); }
+  &.tag-interviewer #{$suffix}{ @include tag("interviewer"); }
+  &.tag-pr #{$suffix}{ @include tag("pr"); }
+  &.tag-training #{$suffix}{ @include tag("training"); }
+}
+
 .cnto-page {
+  position: relative;
+
   section {
     margin: 1.5em 0;
     padding: 1px 0;
@@ -20,15 +36,31 @@ $tagsmap: (recruit: 1164126);
     color: $primary-color;
   }
 
+  a {
+    color: $primary-color;
+
+    &:hover {
+      color: $alternative-color;
+      text-decoration: none;
+    }
+  }
+
   .page-content.with-nav {
-    margin-right: 20px;
+    margin-right: $nav-size;
   }
 
   .page-nav {
     position: fixed;
-    top: 200px;
+    top: 475px;
     right: 50%;
     margin-right: -302px;
+    transition: top 1s;
+
+    &.scrolled {
+      top: 200px;
+      transition: top 1s;
+    }
+
     h2 {
       display: none;
     }
@@ -41,27 +73,29 @@ $tagsmap: (recruit: 1164126);
       list-style: none;
     }
     a {
-      @include tag("recruit");
+      $padding: 5px;
 
       display: block;
       border-bottom: 1px solid #ccc;
       background-position: right 5px center;
-      background-size: 20px;
-      padding: 3px 20px 3px 10px;
+      background-size: $nav-size;
+      padding: $padding $nav-size $padding $padding*2;
       color: #fff;
       text-decoration: none;
-      line-height: 25px;
-      height: 25px;
+      line-height: $nav-size;
+      height: $nav-size;
 
       .entry-text {
-        line-height: 25px;
+        line-height: $nav-size;
         display: none;
-        margin-right: 10px;
+        margin-right: $padding*3;
       }
 
       &:hover {
-        background-color: #333;
+        background-color: #666;
       }
+
+      @include tag-classes;
     }
 
     &:hover {
@@ -70,6 +104,10 @@ $tagsmap: (recruit: 1164126);
 
       .entry-text {
         display: block;
+      }
+
+      a {
+        border-bottom: 1px solid #fff;
       }
     }
   }

@@ -22,7 +22,7 @@
       vertical-align: middle;
     }
     .name {
-      width: 25%;
+      width: 35%;
       text-align: center;
       font-size: 150%;
       line-height: 1.5;
@@ -34,12 +34,16 @@
         transition: background .5s;
         cursor: pointer;
       }
+    }
 
-      .description{
-        width: 75%;
-        text-align: left;
-        *:last-child {
-          margin-bottom: 0;
+    .description{
+      font-size: 115%;
+      width: 65%;
+      text-align: left;
+      ul {
+        margin-bottom: 0;
+        li {
+          margin: .25em;
         }
       }
     }
@@ -48,6 +52,8 @@
 
 /* Rank presentation */
 .rank {
+  @include tag-classes(".content");
+
   header {
     margin: 0 0 2em;
 
@@ -97,4 +103,3 @@
     }
   }
 }
-.rank-grunt .content { @include tag("recruit"); }

@@ -1,3 +1,15 @@
-var events = require("events");
+var $ = require("jquery");
 
-console.log(events);
+$(function() {
+  var $win = $(window),
+      offset = 300;
+
+  $win.on("scroll", function() {
+    var currentScroll = $win.scrollTop();
+    if (currentScroll > offset) {
+      $(".page-nav").addClass("scrolled");
+    } else {
+      $(".page-nav").removeClass("scrolled");
+    }
+  });
+});
