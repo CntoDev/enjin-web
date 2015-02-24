@@ -1,0 +1,15 @@
+.cnto-page {
+  .important {
+    color: $important-text-color;
+  }
+
+  .well {
+    background: #f0f0f0;
+    padding: .75em;
+    border-radius: 5px;
+
+    &.important {
+      background: lighten($important-text-color, 60%);
+    }
+  }
+}

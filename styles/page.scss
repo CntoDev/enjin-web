@@ -1,6 +1,6 @@
 
 @mixin tag($tagname) {
-  background-image: url("http://files.enjin.com/821401/site_user_tags/" + map-get($tagsmap, $tagname) + ".png");
+  background-image: url("http://files.enjin.com/821401/site_user_tags_highres/" + map-get($tagsmap, $tagname) + ".png");
   background-repeat: no-repeat;
 }
 
@@ -8,15 +8,18 @@
   &.tag-recruit #{$suffix}{ @include tag("recruit"); }
   &.tag-grunt #{$suffix}{ @include tag("grunt"); }
   &.tag-spc #{$suffix}{ @include tag("spc"); }
+  &.tag-tspc #{$suffix}{ @include tag("tspc"); }
   &.tag-jrnco #{$suffix}{ @include tag("jrnco"); }
   &.tag-nco #{$suffix}{ @include tag("nco"); }
+  &.tag-snco #{$suffix}{ @include tag("snco"); }
   &.tag-co #{$suffix}{ @include tag("co"); }
   &.tag-xo #{$suffix}{ @include tag("xo"); }
-  &.tag-video #{$suffix}{ @include tag("video"); }
-  &.tag-contributor #{$suffix}{ @include tag("contributor"); }
+  &.tag-vmaker #{$suffix}{ @include tag("vmaker"); }
+  &.tag-con #{$suffix}{ @include tag("con"); }
   &.tag-interviewer #{$suffix}{ @include tag("interviewer"); }
-  &.tag-pr #{$suffix}{ @include tag("pr"); }
-  &.tag-training #{$suffix}{ @include tag("training"); }
+  &.tag-promoter #{$suffix}{ @include tag("promoter"); }
+  &.tag-trainer #{$suffix}{ @include tag("trainer"); }
+  &.tag-mission-maker #{$suffix}{ @include tag("mission-maker"); }
 }
 
 .cnto-page {
@@ -46,7 +49,7 @@
   }
 
   .page-content.with-nav {
-    margin-right: $nav-size;
+    margin-right: $nav-size * 1.3;
   }
 
   .page-nav {

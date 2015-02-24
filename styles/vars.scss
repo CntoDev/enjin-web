@@ -1,19 +1,21 @@
 $primary-color: #bd910d;
-$alternative-color: #1C1C84;
+$alternative-color: #333;
+$important-text-color: #b80000;
 
-$tagsmap: (recruit: 1164126,
+$tagsmap: (recruit: 'Recruit',
            grunt: 1164127,
-           tspc: 1165093,
-           spc: 1165134,
+           tspc: 'Technical Specialist',
+           spc: 'Specialist',
            jrnco: 1164128,
-           nco: 1164131,
-           snco: 1164132,
-           xo: 1164133,
-           co: 1164134,
-           contributor: 1164261,
-           training: 1304218,
-           pr: 1304219,
-           interviewer: 1304209,
-           video: 1304194);
+           nco: 'NCO',
+           snco: 'SNCO',
+           xo: 'XO',
+           co: 'CO',
+           con: 'Contributor (Gold)',
+           trainer: 'Training - Head',
+           promoter: 'Public Relations - Head',
+           interviewer: 'Interviewer - Head',
+           mission-maker: 'Mission Making - Head',
+           vmaker: 'Video Making - Head');
 
 $nav-size: 30px;

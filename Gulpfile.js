@@ -31,7 +31,8 @@ gulp.task("dist", function(done) {
   options.minify = true;
 
   return sequence(
-    "build",
+    "clean",
+    ["styles", "scripts", "html"],
     done
   );
 });

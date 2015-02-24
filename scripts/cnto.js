@@ -2,7 +2,7 @@ var $ = require("jquery");
 
 $(function() {
   var $win = $(window),
-      offset = 300;
+      offset = 225;
 
   $win.on("scroll", function() {
     var currentScroll = $win.scrollTop();
