@@ -1,12 +1,14 @@
 $primary-color: #bd910d;
 $alternative-color: #333;
 $important-text-color: #b80000;
+$light-border-color: #eee;
+$light-bg-highlight-color: #f5f5f5;
 
 $tagsmap: (recruit: 'Recruit',
-           grunt: 1164127,
+           grunt: 'Grunt',
            tspc: 'Technical Specialist',
            spc: 'Specialist',
-           jrnco: 1164128,
+           jrnco: 'JrNCO',
            nco: 'NCO',
            snco: 'SNCO',
            xo: 'XO',
