@@ -12,4 +12,14 @@
       background: lighten($important-text-color, 60%);
     }
   }
+
+  .content {
+    h1, h2, h3, h4, ul, p, ol, dl, table {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+#page-wrap .cnto-page {
+  color: $normal-text-color;
 }

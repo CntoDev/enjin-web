@@ -1,0 +1,35 @@
+.rules-container {
+  $no-width: 60px;
+  .rule {
+    position: relative;
+    margin: 0 0 1em 0;
+    padding-left: $no-width;
+
+    .no {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: left;
+      display: block;
+      padding: .3em .75em;
+
+      font-size: 150%;
+    }
+
+    .content {
+      border-left: 1px solid $light-border-color;
+      padding: 5px 1em;
+    }
+
+    &:hover {
+      background: $primary-color;
+      .no {
+        color: #fff;
+      }
+      .content {
+        background: $light-bg-highlight-color;
+        color: $darker-text-color;
+      }
+    }
+  }
+}
