@@ -2,14 +2,21 @@ var $ = require("jquery");
 
 $(function() {
   var $win = $(window),
-      offset = 225;
+      $pages = $(".cnto-page");
 
   $win.on("scroll", function() {
-    var currentScroll = $win.scrollTop();
-    if (currentScroll > offset) {
-      $(".page-nav").addClass("scrolled");
-    } else {
-      $(".page-nav").removeClass("scrolled");
-    }
+    var scrollTop = $win.scrollTop();
+
+    $pages.each(function(idx, page) {
+      var $page = $(page),
+          pageTop = $page.offset().top,
+          top = pageTop - scrollTop;
+
+      if (top < 10) {
+        $page.find(".page-nav").addClass("scrolled");
+      } else {
+        $page.find(".page-nav").removeClass("scrolled");
+      }
+    });
   });
 });

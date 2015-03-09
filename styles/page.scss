@@ -81,14 +81,17 @@
   }
 
   .page-nav {
-    position: fixed;
-    top: 475px;
-    right: 50%;
-    margin-right: -302px;
+    position: absolute;
+    top: 0;
+    right: -10px;
     transition: top .1s;
 
     &.scrolled {
-      top: 200px;
+      position: fixed;
+      top: 50%;
+      right: 50%;
+      margin-right: -302px;
+      transform: translate(0, -50%);
       transition: top .1s;
     }
 
