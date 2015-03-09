@@ -84,7 +84,6 @@
     position: absolute;
     top: 0;
     right: -10px;
-    transition: top .1s;
 
     &.scrolled {
       position: fixed;
@@ -92,7 +91,6 @@
       right: 50%;
       margin-right: -302px;
       transform: translate(0, -50%);
-      transition: top .1s;
     }
 
     h2 {
