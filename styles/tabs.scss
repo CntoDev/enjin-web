@@ -1,0 +1,210 @@
+/* Bootstrap tab stuff */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.nav-tabs>li {
+  margin-bottom: -1px;
+}
+
+.nav>li {
+  position: relative;
+  display: block;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+  text-decoration: none;
+  background-color: #eee;
+}
+
+.nav-tabs>li>a {
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+}
+
+/* custom inclusion of right, left and below tabs */
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+display: block;
+}
+
+.tabs-below > .nav-tabs {
+border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+margin-top: -1px;
+margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+-webkit-border-radius: 0 0 4px 4px;
+   -moz-border-radius: 0 0 4px 4px;
+        border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+border-top-color: #ddd;
+border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+min-width: 74px;
+margin-right: 0;
+margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+float: left;
+margin-right: 19px;
+border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+margin-right: -1px;
+-webkit-border-radius: 4px 0 0 4px;
+   -moz-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+border-color: #ddd transparent #ddd #ddd;
+*border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+float: right;
+margin-left: 19px;
+border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+margin-left: -1px;
+-webkit-border-radius: 0 4px 4px 0;
+   -moz-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+border-color: #ddd #ddd #ddd transparent;
+*border-left-color: #ffffff;
+}
+
+/* CNTO stuff */
+.body-wrap-3 {
+  background-color: rgb(44, 51, 38);
+}
+
+a {
+color: #bd910d;
+text-decoration: none;
+}
+
+.nav-tabs>li.active>a {
+color: #2c3326;
+}
+
+.rank-title {
+font-weight: bold;
+text-align: center;
+}
+
+.command-title {
+font-weight: bold;
+padding-right: 20px;
+}
+
+.table {
+/*border: 1px solid grey;*/
+padding: 10px 10px 10px 10px;
+width: 100%;
+
+border-collapse: collapse;
+border-spacing: 2px;
+}
+
+.table>tbody>tr>td {
+padding: 8px;
+border-top: 1px solid #ddd;
+text-align: center;
+}
+
+.table>tbody>tr>th {
+text-align: center;
+border-bottom: 1px solid #bd910d;
+background-color: #bd910d;
+color: white;
+}
+
+.parent-table {
+width: 80%;
+min-width: 400px;
+min-height: 1317px;
+}
+
+.parent-table-row {
+vertical-align: top;
+}
+
+.department-header {
+font-weight: bold;
+}
+
+.department-table {
+width: 200px;
+}
