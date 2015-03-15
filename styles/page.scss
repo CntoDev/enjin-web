@@ -96,17 +96,22 @@
     h2 {
       display: none;
     }
+    
     ul {
+      list-style-type: none;
       margin: 0;
       padding: 0;
     }
+
     ul li {
       display: block;
       list-style: none;
+      text-indent: 0;
+      padding-left: 0;
     }
+
     a {
       $padding: 5px;
-
       display: block;
       border-bottom: 1px solid #ccc;
       background-position: right 5px center;
@@ -133,7 +138,7 @@
     &:hover {
       background-color: $primary-color;
       box-shadow: 0 0 2px rgba(0,0,0,.25);
-
+      
       .entry-text {
         display: block;
       }
