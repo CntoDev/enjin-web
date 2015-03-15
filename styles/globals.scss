@@ -23,3 +23,14 @@
 #page-wrap .cnto-page {
   color: $normal-text-color;
 }
+
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.content {
+  text-align: justify;
+}
