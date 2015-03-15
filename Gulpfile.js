@@ -32,7 +32,7 @@ gulp.task("dist", function(done) {
 
   return sequence(
     "clean",
-    ["styles", "scripts", "html"],
+    ["styles", "scripts", "html", "images"],
     done
   );
 });
@@ -40,7 +40,7 @@ gulp.task("dist", function(done) {
 gulp.task("build", function(done) {
   return sequence(
     "clean",
-    ["styles", "scripts", "html"],
+    ["styles", "scripts", "html", "images"],
     "watch",
     done
   );
@@ -63,6 +63,10 @@ gulp.task("watch", function() {
 
 gulp.task("clean", function() {
   return gulp.src(dir("dist"), { read: false }).pipe(clean());
+});
+
+gulp.task("images", function() {
+  return gulp.src(dir("styles/images/**/*")).pipe(gulp.dest(dir("dist", "styles/images")));
 });
 
 gulp.task('styles', buildStyles);

@@ -33,3 +33,23 @@ li {
 .content {
   text-align: justify;
 }
+
+.apply-button {
+  display: block;
+  background: #333 url("images/signup.png") no-repeat 50% 10px;
+  background-size: 66%;
+  width: 100%;
+  padding: 115px 0 15px;
+  font-size: 115%;
+  text-align: center;
+  font-weight: bold;
+  color: #eee;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $primary-color;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+  }
+}
