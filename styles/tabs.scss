@@ -206,5 +206,12 @@ font-weight: bold;
 }
 
 .department-table {
-width: 200px;
+  width: 200px;
+}
+
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
 }
