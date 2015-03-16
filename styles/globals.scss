@@ -18,20 +18,20 @@
       margin-bottom: 1em;
     }
   }
+  
+  li {
+    list-style-position: inside;
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+
+  .content {
+    text-align: justify;
+  }
 }
 
 #page-wrap .cnto-page {
   color: $normal-text-color;
-}
-
-li {
-  list-style-position: inside;
-  text-indent: -1em;
-  padding-left: 1em;
-}
-
-.content {
-  text-align: justify;
 }
 
 .apply-button {
