@@ -7,15 +7,13 @@ from datetime import datetime
 from lxml import _elementpath as _dummy
 
 class Attendance(object):
-    def __init__(self, username_string, attending_string, note_string, role_string, attendance_report_timestamp):
+    def __init__(self, username_string, attending_string, role_string):
         self.username = username_string
         self.attending_status = attending_string
-        self.note = note_string
         self.role = role_string
-        self.attendance_dt = attendance_report_timestamp
 
     def write_csv_row(self, output_file):
-        output_file.write("%s,%s,%s,%s,%s\n" % (self.username, self.attending_status, self.note, self.role, self.attendance_dt.strftime("%Y-%m-%d %H:%M:%S")))
+        output_file.write("%s,%s,%s\n" % (self.username, self.attending_status, self.role))
 
         
 def enjin_dt_string_to_dt(date_string):
@@ -31,12 +29,12 @@ def event_page_dt_string_to_dt(date_string):
 
     
 def get_attendance_for_user_id(browser, user_id):
-    ac = webdriver.ActionChains(browser) 
-    hover_element = browser.find_element_by_css_selector("[userid='%s'] .attending-type" % (user_id, ))
-    ac.move_to_element(hover_element) 
-    ac.perform()
+    #ac = webdriver.ActionChains(browser) 
+    #hover_element = browser.find_element_by_css_selector("[userid='%s'] .attending-type" % (user_id, ))
+    #ac.move_to_element(hover_element) 
+    #ac.perform()
     
-    time.sleep(0.1)
+    #time.sleep(0.1)
     
     event_source = browser.page_source
     event_source = event_source.encode('utf-8')
@@ -48,22 +46,24 @@ def get_attendance_for_user_id(browser, user_id):
     
     attending_element = event_pq("[userid='%s'] .attending-type .text" % (user_id,))[0]
     attending_string = list(attending_element)[0].text
+    if attending_string is None:
+        attending_string = ""
     
-    note_element = event_pq("[userid='%s'] .note" % (user_id,))[0]
-    note_string = note_element.text
+    #note_element = event_pq("[userid='%s'] .note" % (user_id,))[0]
+    #note_string = note_element.text
     
     role_element = event_pq("[userid='%s'] .roles .role" % (user_id,))
-    role_string = None
+    role_string = ""
     if len(role_element) > 0:
         role_string = role_element[0].attrib["rolename"]
         
-    attendance_history_element = event_pq('.history-attendance-items .item-history')[-1]
-    attendance_type = attendance_history_element[0].text
+    #attendance_history_element = event_pq('.history-attendance-items .item-history')[-1]
+    #attendance_type = attendance_history_element[0].text
     
-    attendance_report_timestamp = attendance_history_element[1].text
-    attendance_report_dt = enjin_dt_string_to_dt(attendance_report_timestamp)
+    #attendance_report_timestamp = attendance_history_element[1].text
+    #attendance_report_dt = enjin_dt_string_to_dt(attendance_report_timestamp)
 
-    return Attendance(username_string, attending_string, note_string, role_string, attendance_report_dt)
+    return Attendance(username_string, attending_string, role_string)
 
     
 def get_filename(start_dt):
@@ -190,7 +190,7 @@ class Event(object):
         
     def write_roster_to_filename(self, output_filename):
         output_file = open(output_filename, "w")
-        output_file.write("user,status,note,role,attendance_timestamp\n")
+        #output_file.write("user,status,role\n")
         for attendance in self.attendances:
             attendance.write_csv_row(output_file)
         output_file.close()
