@@ -17,6 +17,19 @@ class Attendance(object):
     def write_csv_row(self, output_file):
         output_file.write("%s,%s,%s,%s,%s\n" % (self.username, self.attending_status, self.note, self.role, self.attendance_dt.strftime("%Y-%m-%d %H:%M:%S")))
 
+        
+def enjin_dt_string_to_dt(date_string):
+    date_string = date_string[5:].replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
+    dt = datetime.strptime(date_string, "%d %b %Y @ %H:%M:%S")
+    return dt
+    
+
+def event_page_dt_string_to_dt(date_string):
+    date_string = date_string.split(",")[1]
+    dt = datetime.strptime(("%s " + date_string) % (datetime.now().year), "%Y %B %d")
+    return dt
+
+    
 def get_attendance_for_user_id(browser, user_id):
     ac = webdriver.ActionChains(browser) 
     hover_element = browser.find_element_by_css_selector("[userid='%s'] .attending-type" % (user_id, ))
@@ -46,12 +59,27 @@ def get_attendance_for_user_id(browser, user_id):
         
     attendance_history_element = event_pq('.history-attendance-items .item-history')[-1]
     attendance_type = attendance_history_element[0].text
-    attendance_report_timestamp = attendance_history_element[1].text[5:].replace("th", "").replace("st", "").replace("nd", "").replace("rd", "")
-
-    attendance_report_dt = datetime.strptime(attendance_report_timestamp, "%d %b %Y @ %H:%M:%S")
+    
+    attendance_report_timestamp = attendance_history_element[1].text
+    attendance_report_dt = enjin_dt_string_to_dt(attendance_report_timestamp)
 
     return Attendance(username_string, attending_string, note_string, role_string, attendance_report_dt)
-        
+
+    
+def get_filename(start_dt):
+    return start_dt.strftime("event-%Y-%m-%d.csv")
+    
+    
+def get_event_start_dt(browser):
+    event_source = browser.page_source
+    event_source = event_source.encode('utf-8')
+    
+    event_pq = pq(event_source)
+    start_element = event_pq(".item-event-start .info")
+    start_text = start_element.text()
+    return event_page_dt_string_to_dt(start_text)
+    
+    
 def get_user_ids(browser):
     event_source = browser.page_source
     event_source = event_source.encode('utf-8')
@@ -97,6 +125,7 @@ class Event(object):
             #home_file.write(home_source)
             #home_file.close()
         
+        start_dt = None
         attendances = []
         
         try:
@@ -119,6 +148,14 @@ class Event(object):
                 browser.get(event_url)
                 
                 time.sleep(1.0)
+                
+                start_dt = get_event_start_dt(browser)
+                
+                target_filename = get_filename(start_dt)
+                if os.path.exists(target_filename):
+                    os.remove(target_filename)
+                    
+                print "Found event for %s!" % (start_dt, )
                 
                 user_ids = get_user_ids(browser)
                 print "Retrieving data for %s users..." % (len(user_ids), )
@@ -145,9 +182,10 @@ class Event(object):
         
         #attendances = pickle.load( open( "save.p", "rb" ) )
         
-        return Event(attendances)
+        return Event(start_dt, attendances)
 
-    def __init__(self, attendances):
+    def __init__(self, start_dt, attendances):
+        self.start_dt = start_dt
         self.attendances = attendances
         
     def write_roster_to_filename(self, output_filename):
@@ -163,13 +201,14 @@ class Event(object):
         if not os.path.exists(output_dirname):
             os.makedirs(output_dirname)
         
-        output_name = "roster.csv"
+        output_name = get_filename(self.start_dt)
         output_filename = os.path.join(output_dirname, output_name)
         try:
             self.write_roster_to_filename(output_filename)
         except IOError, e:
             self.write_roster_to_filename(output_filename + ".fallback")
-          
+
+
 if __name__ == "__main__":
     print "CNTO event tracker 0.1 by Supreme (sakkie99@gmail.com)"
 
