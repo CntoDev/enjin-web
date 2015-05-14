@@ -98,32 +98,24 @@ def get_user_ids(browser):
 class Event(object):
     @classmethod
     def get_next_event(cls):
-        browser = None
-    
-        if os.path.exists("home.html"):
-            home_file = open("home.html", "r")
-            home_source = "".join(home_file.readlines())
-            home_file.close()
-            
-            home_pq = pq(home_source)
-        else:
-            if browser is None:
-                browser = webdriver.Chrome()
+        """Unfortunately, have to use selenium to retrieve the pages, since there is
+        extensive DDoS protection on enjin.  Simply using requests was quickly blocked.
+        """
+        browser = webdriver.Chrome()
+        home_url = "http://carpenoctem.co/home"
+        print "Retrieving home %s..." % (home_url, )
+        browser.get(home_url)
         
-            home_url = "http://carpenoctem.co/home"
-            print "Retrieving home %s..." % (home_url, )
-            browser.get(home_url)
-            
-            time.sleep(1.0)
-            
-            home_source = browser.page_source
-            home_source = home_source.encode('utf-8')
-            
-            home_pq = pq(home_source)
+        time.sleep(1.0)
+        
+        home_source = browser.page_source
+        home_source = home_source.encode('utf-8')
+        
+        home_pq = pq(home_source)
 
-            #home_file = open("home.html", "w")
-            #home_file.write(home_source)
-            #home_file.close()
+        #home_file = open("home.html", "w")
+        #home_file.write(home_source)
+        #home_file.close()
         
         start_dt = None
         attendances = []
@@ -136,37 +128,29 @@ class Event(object):
             event_name = next_event[0].text
             event_url = "http://carpenoctem.co/" + next_event[0].attrib["href"]
             
-            if os.path.exists("event.html"):
-                event_file = open("event.html", "r")
-                event_source = "".join(event_file.readlines())
-                event_file.close()
-            else:
-                if browser is None:
-                    browser = webdriver.Chrome()
+            print "Retrieving next event %s..." % (event_url, )
+            browser.get(event_url)
             
-                print "Retrieving next event %s..." % (event_url, )
-                browser.get(event_url)
+            time.sleep(1.0)
+            
+            start_dt = get_event_start_dt(browser)
+            
+            target_filename = get_filename(start_dt)
+            if os.path.exists(target_filename):
+                os.remove(target_filename)
                 
-                time.sleep(1.0)
-                
-                start_dt = get_event_start_dt(browser)
-                
-                target_filename = get_filename(start_dt)
-                if os.path.exists(target_filename):
-                    os.remove(target_filename)
-                    
-                print "Found event for %s!" % (start_dt, )
-                
-                user_ids = get_user_ids(browser)
-                print "Retrieving data for %s users..." % (len(user_ids), )
-                
-                for user_id in user_ids:
-                    attendance = get_attendance_for_user_id(browser, user_id)
-                    attendances.append(attendance)
-                
-                #event_file = open("event.html", "w")
-                #event_file.write(event_source)
-                #event_file.close()
+            print "Found event for %s!" % (start_dt, )
+            
+            user_ids = get_user_ids(browser)
+            print "Retrieving data for %s users..." % (len(user_ids), )
+            
+            for user_id in user_ids:
+                attendance = get_attendance_for_user_id(browser, user_id)
+                attendances.append(attendance)
+            
+            #event_file = open("event.html", "w")
+            #event_file.write(event_source)
+            #event_file.close()
             
         except Exception, e:
             print "Could not determine next event!"
