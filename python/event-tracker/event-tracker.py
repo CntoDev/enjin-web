@@ -1,10 +1,30 @@
 import time
+import traceback
+import logging
 import pickle
 import os
 from pyquery import PyQuery as pq
 from selenium import webdriver
 from datetime import datetime
 from lxml import _elementpath as _dummy
+
+log = logging.getLogger("event-tracker")
+log.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+ch.setFormatter(formatter)
+log.addHandler(ch)
+
+fh = logging.FileHandler("event-tracker.log")
+fh.setLevel(logging.DEBUG)
+fh.setFormatter(formatter)
+log.addHandler(fh)
+
+browser = webdriver.Chrome()
+#browser = webdriver.Remote(desired_capabilities=webdriver.DesiredCapabilities.HTMLUNITWITHJS)
 
 class Attendance(object):
     def __init__(self, username_string, attending_string, role_string):
@@ -101,9 +121,8 @@ class Event(object):
         """Unfortunately, have to use selenium to retrieve the pages, since there is
         extensive DDoS protection on enjin.  Simply using requests was quickly blocked.
         """
-        browser = webdriver.Chrome()
         home_url = "http://carpenoctem.co/home"
-        print "Retrieving home %s..." % (home_url, )
+        log.info("Retrieving home %s..." % (home_url, ))
         browser.get(home_url)
         
         time.sleep(1.0)
@@ -128,7 +147,7 @@ class Event(object):
             event_name = next_event[0].text
             event_url = "http://carpenoctem.co/" + next_event[0].attrib["href"]
             
-            print "Retrieving next event %s..." % (event_url, )
+            log.info("Retrieving next event %s..." % (event_url, ))
             browser.get(event_url)
             
             time.sleep(1.0)
@@ -139,10 +158,10 @@ class Event(object):
             if os.path.exists(target_filename):
                 os.remove(target_filename)
                 
-            print "Found event for %s!" % (start_dt, )
+            log.info("Found event for %s!" % (start_dt, ))
             
             user_ids = get_user_ids(browser)
-            print "Retrieving data for %s users..." % (len(user_ids), )
+            log.info("Retrieving data for %s users..." % (len(user_ids), ))
             
             for user_id in user_ids:
                 attendance = get_attendance_for_user_id(browser, user_id)
@@ -153,12 +172,9 @@ class Event(object):
             #event_file.close()
             
         except Exception, e:
-            print "Could not determine next event!"
+            log.info("Could not determine next event!")
             raise
           
-        if browser is not None:
-            browser.close()
-        
         #pickle.dump( attendances, open( "save.p", "wb" ) )
         
         #os.remove("event.html")
@@ -175,11 +191,13 @@ class Event(object):
     def write_roster_to_filename(self, output_filename):
         output_file = open(output_filename, "w")
         #output_file.write("user,status,role\n")
+        self.attendances.sort(key=lambda x: x.username)
+        
         for attendance in self.attendances:
             attendance.write_csv_row(output_file)
         output_file.close()
         
-        print "Result written to %s!" % (output_filename,)
+        log.info("Result written to %s!" % (output_filename,))
     
     def write_roster(self, output_dirname):
         if not os.path.exists(output_dirname):
@@ -194,8 +212,21 @@ class Event(object):
 
 
 if __name__ == "__main__":
-    print "CNTO event tracker 0.1 by Supreme (sakkie99@gmail.com)"
+    log.info("CNTO event tracker 0.1.1 by Supreme (sakkie99@gmail.com)")
+    log.info("Starting roster retrieval...")
 
-    event = Event.get_next_event()
+    try:
+      if browser is None:
+        raise Exception("Could not create instance of browser!")
     
-    event.write_roster("output")
+      event = Event.get_next_event()
+      
+      event.write_roster("output")
+      
+      log.info("Roster retrieval for event on %s complete!" % (event.start_dt.strftime("%Y-%m-%d"), ))
+    except Exception, e:
+      log.error(traceback.format_exc())
+      
+    if browser is not None:
+      browser.close()
+        
