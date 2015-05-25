@@ -159,11 +159,6 @@ text-decoration: none;
 color: #2c3326;
 }
 
-.rank-title {
-font-weight: bold;
-text-align: center;
-}
-
 .command-title {
 font-weight: bold;
 padding-right: 20px;
@@ -186,7 +181,7 @@ text-align: center;
 
 .table>tbody>tr>th {
 text-align: center;
-border-bottom: 1px solid #bd910d;
+/*border-bottom: 1px solid #bd910d;*/
 background-color: #bd910d;
 color: white;
 }

@@ -1,0 +1,24 @@
+.table {
+  .rank-title {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .rank-column {
+    width: 200px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .rank-column-elevated {
+    width: 200px;
+    font-weight: bold;
+    text-align: right;
+    background-color: rgb(221, 221, 221);
+  }
+
+  .coc-name {
+    width: 200px;
+    text-align: left;
+  }
+}
