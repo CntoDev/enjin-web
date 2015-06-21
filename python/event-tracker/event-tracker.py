@@ -44,7 +44,19 @@ def enjin_dt_string_to_dt(date_string):
 
 def event_page_dt_string_to_dt(date_string):
     date_string = date_string.split(",")[1]
-    dt = datetime.strptime(("%s " + date_string) % (datetime.now().year), "%Y %B %d")
+    
+    dt = None
+    
+    try:
+      dt = datetime.strptime(("%s " + date_string) % (datetime.now().year), "%Y %B %d")
+    except Exception, e:
+      print e
+      
+    try:
+      dt = datetime.strptime(("%s " + date_string) % (datetime.now().year), "%Y  %b %d")
+    except Exception, e:
+      print e
+      
     return dt
 
     
@@ -212,7 +224,7 @@ class Event(object):
 
 
 if __name__ == "__main__":
-    log.info("CNTO event tracker 0.1.1 by Supreme (sakkie99@gmail.com)")
+    log.info("CNTO event tracker 0.1.2 by Supreme (sakkie99@gmail.com)")
     log.info("Starting roster retrieval...")
 
     try:
