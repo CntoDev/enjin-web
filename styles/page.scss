@@ -11,11 +11,12 @@
   &.tag-tspc #{$suffix}{ @include tag("tspc"); }
   &.tag-jrnco #{$suffix}{ @include tag("jrnco"); }
   &.tag-nco #{$suffix}{ @include tag("nco"); }
-  &.tag-snco #{$suffix}{ @include tag("snco"); }
+  &.tag-srnco #{$suffix}{ @include tag("srnco"); }
   &.tag-co #{$suffix}{ @include tag("co"); }
   &.tag-xo #{$suffix}{ @include tag("xo"); }
   &.tag-vmaker #{$suffix}{ @include tag("vmaker"); }
   &.tag-con #{$suffix}{ @include tag("con"); }
+  &.tag-designer #{$suffix}{ @include tag("designer"); }
   &.tag-interviewer #{$suffix}{ @include tag("interviewer"); }
   &.tag-promoter #{$suffix}{ @include tag("promoter"); }
   &.tag-trainer #{$suffix}{ @include tag("trainer"); }
