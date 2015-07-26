@@ -1,482 +1,524 @@
 @@include(".includes/before.html")
 
 <link rel="stylesheet" type="text/css" href="/styles/cnto.css">
-<!--
+	<!--
 <link rel="stylesheet" type="text/css" href="http://files.enjin.com/821401/css/supreme.css">
 -->
 
-<div class="container">
-    <div class="col-md-6">
-        <div class="tabbable tabs-left">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#command" data-toggle="tab">Command</a></li>
-                <li><a href="#alpha" data-toggle="tab">Alpha Squad</a></li>
-                <li><a href="#bravo" data-toggle="tab">Bravo Squad</a></li>
-                <li><a href="#charlie" data-toggle="tab">Charlie Squad</a></li>
-                <li><a href="#recruits" data-toggle="tab">Recruits Group</a></li>
-                <li><a href="#branches" data-toggle="tab">Branches</a></li>
-                <li><a href="#qualifications" data-toggle="tab">Qualifications</a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div id="command" class="tab-pane active">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                            <td>
-                                <table class="table">
-                                    <tbody>
-                                    <tr><th class="command-title">Commanding Officer</th><th class="command-title">Non-Commissioned Officer</th><th class="command-title">Executive Officer</th></tr>
-                                    <tr>
-                                        <td class="coc-cover-name">Clarke</td>
-                                        <td class="coc-cover-name">Abuk</td>
-                                        <td class="coc-cover-name">Ryujin</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="border-top: none;"></td>
-                                        <td class="coc-cover-name">Shiny</td>
-                                        <td style="border-top: none;"></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="alpha" class="tab-pane">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table">
-                                        <tbody>
-                                          <tr><th colspan="2" class="rank-title">Alpha</th></tr>
-                                          <tr class="rank-column-elevated">
-                                            <td class="rank-column">JrNCO</td><td class="coc-name">Ozzie</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Cob</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Colabear</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Dulabu</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Eistee</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Fructose</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Insane</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Kezzer</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Mars</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Peltier</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">Price</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Specialist</td><td class="coc-name">Robihunn</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Specialist</td><td class="coc-name">Tex</td>
-                                          </tr>
-                                          <tr>
-                                            <td class="rank-column">Grunt</td><td class="coc-name">VolcaniaNL</td>
-                                          </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="bravo" class="tab-pane">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table">
-                                        <tbody>
-                                            <tr><th colspan="2" class="rank-title">Bravo</th></tr>
-                                            <tr class="rank-column-elevated">
-                                              <td class="rank-column">JrNCO</td><td class="coc-name">Kaleo</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Specialist</td><td class="coc-name">Anders</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Dusky</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Fakeless</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Frank</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Igno</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Iisha</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Obi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Phobuus</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Shadwee</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Technical Specialist</td><td class="coc-name">Supreme</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Swipp</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Specialist</td><td class="coc-name">Teddy</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Zjosua</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="charlie" class="tab-pane">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table">
-                                        <tbody>
-                                            <tr><th colspan="2" class="rank-title">Charlie</th></tr>
-                                            <tr class="rank-column-elevated">
-                                              <td class="rank-column">JrNCO</td><td class="coc-name">Bull</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Anarchy</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Specialist</td><td class="coc-name">Chris</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Dachi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Goat</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Grey</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Hellfire</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Ionaru</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Mac</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Rush</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Technical Specialist</td><td class="coc-name">Tiloup</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Specialist</td><td class="coc-name">Xander</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Grunt</td><td class="coc-name">Xerses</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="recruits" class="tab-pane">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table">
-                                        <tbody>
-                                            <tr><th colspan="2" class="rank-title">Recruits Group</th></tr>
-                                            <tr class="rank-column-elevated">
-                                              <td class="rank-column">NCO</td><td class="coc-name">Abuk</td>
-                                            </tr>
-                                            <tr class="rank-column-elevated">
-                                              <td class="rank-column">JrNCO</td><td class="coc-name">John</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Interviewer</td><td class="coc-name">Goat</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Interviewer</td><td class="coc-name">Iisha</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Interviewer</td><td class="coc-name">Ionaru</td>
-                                            </tr>
-                                            <tr>
-                                              <td class="rank-column">Interviewer</td><td class="coc-name">Swipp</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="branches" class="tab-pane">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table department-table" style="float: left;">
-                                        <tbody>
-                                            <tr><th class="department-header" colspan="2">Design</th></tr>
-                                            <tr>
-                                            <td class="rank-column">Web Designer</td>
-                                              <td class="coc-name">Supreme</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Graphic Designer</td>
-                                              <td class="coc-name">Tiloup</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table department-table">
-                                        <tbody>
-                                            <tr>
-                                                <th class="department-header" colspan="2">Training</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">1IC</td>
-                                                <td class="coc-name">Ryujin</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">2IC</td>
-                                                <td class="coc-name">Clarke</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">Trainer</td>
-                                                <td class="coc-name">Abuk</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table department-table" style="float: left;">
-                                        <tbody>
-                                            <tr><th class="department-header" colspan="2">Video Making</th></tr>
-                                                <tr>
-                                                <td class="rank-column">1IC</td>
-                                                  <td class="coc-name">Shiny</td>
-                                            </tr>
-                                                <tr>
-                                                <td class="rank-column">2IC</td>
-                                                  <td class="coc-name">OPEN</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Video Maker</td>
-                                              <td class="coc-name">Bull</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Video Maker</td>
-                                              <td class="coc-name">Ozzie</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Video Maker</td>
-                                              <td class="coc-name">Ryujin</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Video Maker</td>
-                                              <td class="coc-name">Teddy</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Video Maker</td>
-                                              <td class="coc-name">Tiloup</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table department-table">
-                                        <tbody>
-                                            <tr><th class="department-header" colspan="2">Mission Making</th></tr>
-                                                <tr>
-                                                <td class="rank-column">1IC</td>
-                                                  <td class="coc-name">Clarke</td>
-                                            </tr>
-                                                <tr>
-                                                <td class="rank-column">2IC</td>
-                                                  <td class="coc-name">OPEN</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Mission Maker</td>
-                                              <td class="coc-name">Anders</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Mission Maker</td>
-                                              <td class="coc-name">Dulabu</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Mission Maker</td>
-                                              <td class="coc-name">Goat</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Mission Maker</td>
-                                              <td class="coc-name">Robihunn</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">Mission Maker</td>
-                                              <td class="coc-name">Tex</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table department-table" style="float: left;">
-                                        <tbody>
-                                            <tr><th class="department-header" colspan="2">Public Relations</th></tr>
-                                                <tr>
-                                                <td class="rank-column">1IC</td>
-                                                  <td class="coc-name">Bull</td>
-                                            </tr>
-                                                <tr>
-                                                <td class="rank-column">2IC</td>
-                                                  <td class="coc-name">OPEN</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">War Photographer</td>
-                                              <td class="coc-name">Anders</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">War Photographer</td>
-                                              <td class="coc-name">Chris</td>
-                                            </tr>
-                                            <tr>
-                                            <td class="rank-column">War Photographer</td>
-                                              <td class="coc-name">Dachi</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table department-table">
-                                        <tbody>
-                                            <tr>
-                                                <tr>
-                                                    <th class="department-header" colspan="2">Interviewing</th>
-                                                </tr>
-                                                <tr>
-                                                    <td class="rank-column">1IC</td>
-                                                    <td class="coc-name">Abuk</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="rank-column">2IC</td>
-                                                    <td class="coc-name">John</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="rank-column">Interviewer</td>
-                                                    <td class="coc-name">Goat</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="rank-column">Interviewer</td>
-                                                    <td class="coc-name">Iisha</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="rank-column">Interviewer</td>
-                                                    <td class="coc-name">Ionaru</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="rank-column">Interviewer</td>
-                                                    <td class="coc-name">Swipp</td>
-                                                </tr>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="qualifications" class="tab-pane">
-                    <table class="parent-table">
-                        <tbody>
-                            <tr class="parent-table-row">
-                                <td>
-                                    <table class="table department-table" style="float: left;">
-                                        <tbody>
-                                            <tr>
-                                                <th class="department-header" colspan="2">Aviation</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">Pilot</td>
-                                                <td class="coc-name">Clarke</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">Pilot</td>
-                                                <td class="coc-name">Eistee</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">Pilot</td>
-                                                <td class="coc-name">Robihunn</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">Pilot</td>
-                                                <td class="coc-name">Ryujin</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table department-table">
-                                        <tbody>
-                                            <tr>
-                                                <th class="department-header" colspan="2">Fireteam Leader</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="rank-column">FTL</td>
-                                                <td class="coc-name">OPEN</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="container">
+		<div class="col-md-6">
+			<div class="tabbable tabs-left">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#officers" data-toggle="tab">Officers</a></li>
+					<li><a href="#alpha" data-toggle="tab">Alpha Squad</a></li>
+					<li><a href="#bravo" data-toggle="tab">Bravo Squad</a></li>
+					<li><a href="#charlie" data-toggle="tab">Charlie Squad</a></li>
+					<li><a href="#recruits" data-toggle="tab">Recruits Group</a></li>
+					<li><a href="#branches" data-toggle="tab">Branches</a></li>
+					<li><a href="#trainings" data-toggle="tab">Trainings</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div id="officers" class="tab-pane active">
+						<table class="officer-table">
+							<tbody>
+								<tr class="officer-table-row">
+									<td>
+										<table class="table">
+											<tbody>
+												<tr><th class="rank-title">SrNCOs</th></tr>
+												<tr>
+													<td class="coc-cover-name">Clarke</td>
+												</tr>
+												<tr>
+													<td class="coc-cover-name">Ryujin</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="officer-table-row">
+									<td>
+										<table class="table">	
+											<tbody>
+												<tr><th class="rank-title">NCOs</th></tr>
+												<tr>
+													<td class="coc-cover-name">Abuk</td>
+												</tr>
+												<tr>
+													<td class="coc-cover-name">Shiny</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="officer-table-row">
+									<td>
+										<table class="table">	
+											<tbody>
+												<tr><th class="rank-title">JrNCOs</th></tr>
+												<tr>
+													<td class="coc-cover-name">Bull</td>
+												</tr>
+												<tr>
+													<td class="coc-cover-name">John</td>
+												</tr>
+												<tr>
+													<td class="coc-cover-name">Kaleo</td>
+												</tr>
+												<tr>
+													<td class="coc-cover-name">Ozzie</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="alpha" class="tab-pane">
+						<table class="parent-table">
+							<tbody>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table">
+											<tbody>
+												<tr><th colspan="2" class="rank-title">Alpha</th></tr>
+												<tr class="rank-column-elevated">
+													<td class="rank-column">JrNCO</td><td class="coc-name">Ozzie</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Beemeron</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Berenton</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Cob</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Colabear</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Dulabu</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Eistee</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Fructose</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Highway</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Insane</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Mars</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Peltier</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Price</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Robihunn</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Tex</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">VolcaniaNL</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="bravo" class="tab-pane">
+						<table class="parent-table">
+							<tbody>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table">
+											<tbody>
+												<tr><th colspan="2" class="rank-title">Bravo</th></tr>
+												<tr class="rank-column-elevated">
+													<td class="rank-column">JrNCO</td><td class="coc-name">Kaleo</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Anders</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Cody</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Dusky</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Fakeless</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Frank</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Igno</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Iisha</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Matan</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Obi</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Phobuus</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Shadwee</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Supreme</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Swipp</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Teddy</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Zjosua</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="charlie" class="tab-pane">
+						<table class="parent-table">
+							<tbody>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table">
+											<tbody>
+												<tr><th colspan="2" class="rank-title">Charlie</th></tr>
+												<tr class="rank-column-elevated">
+													<td class="rank-column">JrNCO</td><td class="coc-name">Bull</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Anarchy</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Chris</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Chypsa</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Dachi</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Freghar</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Goat</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Grey</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Hateborder</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Hellfire</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Ionaru</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Mac</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Rush</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Tiloup</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Specialist</td><td class="coc-name">Xander</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Grunt</td><td class="coc-name">Xerses</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="recruits" class="tab-pane">
+						<table class="parent-table">
+							<tbody>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table">
+											<tbody>
+												<tr><th colspan="2" class="rank-title">Recruits Group</th></tr>
+												<tr class="rank-column-elevated">
+													<td class="rank-column">NCO</td><td class="coc-name">Abuk</td>
+												</tr>
+												<tr class="rank-column-elevated">
+													<td class="rank-column">JrNCO</td><td class="coc-name">John</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Interviewer</td><td class="coc-name">Goat</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Interviewer</td><td class="coc-name">Iisha</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Interviewer</td><td class="coc-name">Ionaru</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Interviewer</td><td class="coc-name">Swipp</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="branches" class="tab-pane">
+						<table class="parent-table">
+							<tbody>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table department-table" style="float: left;">
+											<tbody>
+												<tr><th class="department-header" colspan="2">Design</th></tr>
+												<tr>
+													<td class="rank-column">Graphic Designer</td>
+													<td class="coc-name">Hateborder</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Web Designer</td>
+													<td class="coc-name">Hellfire</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Web Designer</td>
+													<td class="coc-name">Supreme</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Graphic Designer</td>
+													<td class="coc-name">Tiloup</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table class="table department-table">
+											<tbody>
+												<tr>
+													<th class="department-header" colspan="2">Training</th>
+												</tr>
+												<tr>
+													<td class="rank-column">1IC</td>
+													<td class="coc-name">Ryujin</td>
+												</tr>
+												<tr>
+													<td class="rank-column">2IC</td>
+													<td class="coc-name">Clarke</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Trainer</td>
+													<td class="coc-name">Abuk</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table department-table">
+											<tbody>
+												<tr>
+													<tr>
+														<th class="department-header" colspan="2">Interviewing</th>
+													</tr>
+													<tr>
+														<td class="rank-column">1IC</td>
+														<td class="coc-name">Abuk</td>
+													</tr>
+													<tr>
+														<td class="rank-column">2IC</td>
+														<td class="coc-name">John</td>
+													</tr>
+													<tr>
+														<td class="rank-column">Interviewer</td>
+														<td class="coc-name">Goat</td>
+													</tr>
+													<tr>
+														<td class="rank-column">Interviewer</td>
+														<td class="coc-name">Iisha</td>
+													</tr>
+													<tr>
+														<td class="rank-column">Interviewer</td>
+														<td class="coc-name">Ionaru</td>
+													</tr>
+													<tr>
+														<td class="rank-column">Interviewer</td>
+														<td class="coc-name">Swipp</td>
+													</tr>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table class="table department-table">
+											<tbody>
+												<tr><th class="department-header" colspan="2">Mission Making</th></tr>
+												<tr>
+													<td class="rank-column">1IC</td>
+													<td class="coc-name">Clarke</td>
+												</tr>
+												<tr>
+													<td class="rank-column">2IC</td>
+													<td class="coc-name">OPEN</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Mission Maker</td>
+													<td class="coc-name">Anders</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Mission Maker</td>
+													<td class="coc-name">Dulabu</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Mission Maker</td>
+													<td class="coc-name">Goat</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Mission Maker</td>
+													<td class="coc-name">Robihunn</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Mission Maker</td>
+													<td class="coc-name">Tex</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table department-table" style="float: left;">
+											<tbody>
+												<tr><th class="department-header" colspan="2">Public Relations</th></tr>
+												<tr>
+													<td class="rank-column">1IC</td>
+													<td class="coc-name">Bull</td>
+												</tr>
+												<tr>
+													<td class="rank-column">2IC</td>
+													<td class="coc-name">Clarke</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="trainings" class="tab-pane">
+						<table class="parent-table">
+							<tbody>
+								<tr class="parent-table-row">
+									<td>
+										<table class="table department-table" style="float: left;">
+											<tbody>
+												<tr>
+													<th class="department-header" colspan="2">Trained Pilot</th>
+												</tr>
+												<tr>
+													<td class="rank-column">Pilot</td>
+													<td class="coc-name">Clarke</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Pilot</td>
+													<td class="coc-name">Eistee</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Pilot</td>
+													<td class="coc-name">Robihunn</td>
+												</tr>
+												<tr>
+													<td class="rank-column">Pilot</td>
+													<td class="coc-name">Ryujin</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table class="table department-table">
+											<tbody>
+												<tr>
+													<th class="department-header" colspan="2">Trained Fireteam Leader</th>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Abuk</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Anders</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Bull</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Clarke</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Ozzie</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Ryujin</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Shiny</td>
+												</tr>
+												<tr>
+													<td class="rank-column">FTL</td>
+													<td class="coc-name">Teddy</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-@@include(".includes/after.html")
+	@@include(".includes/after.html")

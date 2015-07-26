@@ -192,7 +192,18 @@ min-width: 400px;
 min-height: 750px;
 }
 
-.parent-table-row {
+
+.parent-table-row{
+vertical-align: top;
+}
+
+.officer-table {
+width: 80%;
+min-width: 400px;
+min-height: 580px;
+}
+
+.officer-table-row{
 vertical-align: top;
 }
 
