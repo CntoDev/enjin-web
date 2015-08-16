@@ -1,4 +1,3 @@
-
 @mixin tag($tagname) {
   background-image: url("http://files.enjin.com/821401/site_user_tags_highres/" + map-get($tagsmap, $tagname) + ".png");
   background-repeat: no-repeat;
@@ -21,6 +20,7 @@
   &.tag-promoter #{$suffix}{ @include tag("promoter"); }
   &.tag-trainer #{$suffix}{ @include tag("trainer"); }
   &.tag-mission-maker #{$suffix}{ @include tag("mission-maker"); }
+ 
 }
 
 .cnto-page {
@@ -134,7 +134,7 @@
       }
 
       @include tag-classes;
-    }
+    }	
 
     &:hover {
       background-color: $primary-color;
@@ -143,11 +143,31 @@
       .entry-text {
         display: block;
       }
+	  
+	 
 
       a {
         border-bottom: 1px solid #fff;
-      }
+	  }
+	  
+	  a.tag-applynow {
+		display: block;
+		background-image: url("images/applynow.png");
+		background-repeat: no-repeat;
+		
+		&:hover {
+			background-color: #666;
+		}
+	  }
+	  
     }
+	
+	a.tag-applynow {
+		background-size: 40px;
+		background-color: #333;
+		display: none;
+	}
+	
   }
 }
 
