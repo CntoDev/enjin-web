@@ -1,5 +1,7 @@
 import sys
-from PySide import QtGui
+from PySide import QtGui, QtCore
+from scrape_event import ScrapeEventWidget
+from export_data import ExportDataWidget
 
 
 def get_application():
@@ -7,9 +9,17 @@ def get_application():
 
 
 class MainWindow(QtGui.QMainWindow):
+    busy_signal = QtCore.Signal(object)
+    show_message_signal = QtCore.Signal(object, object)
+    scraped_result_signal = QtCore.Signal(object, object)
+    
     def __init__(self, control):
         super(MainWindow, self).__init__()
         self._control = control
+        
+        self.busy_signal.connect(self.show_busy)
+        self.show_message_signal.connect(self.show_message)
+        self.scraped_result_signal.connect(self.scraped_result)
         
         self.setWindowTitle('CNTO Roster Manager')    
         self.create_menus()
@@ -17,15 +27,30 @@ class MainWindow(QtGui.QMainWindow):
     
         self.update_button_states()
         
+        self.resize(600, 400)
+    
+    @QtCore.Slot(object, object)
+    def scraped_result(self, event_date, result):
+        self._control.scraped_result(event_date, result)
+    
+    @QtCore.Slot(object, object)
+    def show_message(self, header, message):
+        
+        flags = QtGui.QMessageBox.StandardButton.Ok
+        response = QtGui.QMessageBox.warning(self, header,
+                                             message, flags)
+    
     def update_button_states(self):
         if self._control.database_loaded():
             self._load_action.setEnabled(False)
             self._export_action.setEnabled(True)
             self._scrape_action.setEnabled(True)
+            self._unload_action.setEnabled(True)
         else:
             self._load_action.setEnabled(True)
             self._export_action.setEnabled(False)
             self._scrape_action.setEnabled(False)
+            self._unload_action.setEnabled(False)
         
     def create_menus(self):
         self._file_menu = self.menuBar().addMenu("&File")
@@ -42,14 +67,32 @@ class MainWindow(QtGui.QMainWindow):
         self._export_action.triggered.connect(self.export_data)
         self._file_menu.addAction(self._export_action)
     
+        self._unload_action = QtGui.QAction('&Unload data', self)
+        self._unload_action.triggered.connect(self.unload_db)
+        self._file_menu.addAction(self._unload_action)
+    
         self._file_menu.addSeparator()
     
         self._exit_action = QtGui.QAction('&Exit', self)
         self._exit_action.triggered.connect(self.close)
         self._file_menu.addAction(self._exit_action)
     
+    @QtCore.Slot(object)
+    def show_busy(self, busy):
+        if busy:
+            self.centralWidget().setEnabled(False)
+        else:
+            self.centralWidget().setEnabled(True)
+    
+    def unload_db(self):
+        self._control.set_database_directory(None)
+        self.setCentralWidget(None)
+    
+    def scrape(self, dt, start_hour, end_hour):
+        self._control.scrape(dt, start_hour, end_hour)
+    
     def scrape_event_selected(self):
-        pass
+        self.setCentralWidget(ScrapeEventWidget(self))
     
     def load_db_selected(self):
         self._control.set_database_directory(self.select_database_directory())
@@ -59,7 +102,7 @@ class MainWindow(QtGui.QMainWindow):
         return selected_directory    
     
     def export_data(self):
-        self.statusBar().showMessage("Load db")    
+        self.setCentralWidget(ExportDataWidget(self))    
     
     def update_status_bar(self):
         if self._control.database_loaded():

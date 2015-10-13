@@ -8,12 +8,15 @@ from datetime import datetime
 
 
 class RosterDatabase(object):
-    def __init__(self, sqlite_dirname):
+    def __init__(self, sqlite_dirname, strict=False):
         self._sqlite_dirname = sqlite_dirname
         self._sqlite_filename = os.path.join(sqlite_dirname, "cnto.sqlite")
         
         if not os.path.exists(self._sqlite_filename):
-            self.initialize()
+            if strict:
+                raise ValueError("Database not found!")
+            else:
+                self.initialize()
         
         self.backup()
     

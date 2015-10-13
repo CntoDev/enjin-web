@@ -6,6 +6,7 @@ import logging
 import pickle
 import os
 import urllib
+import threading
 
 from roster_db import RosterDatabase
 from datetime import datetime
@@ -28,6 +29,28 @@ FH.setFormatter(FORMATTER)
 LOG.addHandler(FH)
 
 MINIMUM_ATTENDANCE_NUMBER = 5
+
+
+class ScrapeThread(threading.Thread):
+    def __init__(self, viewer, start_dt, end_dt):
+        threading.Thread.__init__(self)
+        self._viewer = viewer
+        self._start_dt = start_dt
+        self._end_dt = end_dt
+        
+    def run(self):
+        self._viewer.busy_signal.emit(True)
+        try:
+            scraped_result, scrape_stats = get_all_event_attendances_between(self._start_dt, self._end_dt)
+            self._viewer.scraped_result_signal.emit(self._start_dt.date(), scraped_result)
+            self._viewer.show_message_signal.emit("Success", "Scraped succesfully for %s players with an average attendance of %s\n"
+                                                  "minutes out of a total played time of %s minutes!" % (len(scraped_result),
+                                                                                                 int(scrape_stats["minutes"] * scrape_stats["average_attendance"]),
+                                                                                                 int(scrape_stats["minutes"])))
+            
+        except Exception, e:
+            self._viewer.show_message_signal.emit("Error", str(e))
+        self._viewer.busy_signal.emit(False)
 
 
 def get_url_for_event_page(page_number=1):
@@ -218,10 +241,14 @@ def get_all_event_attendances_between(start_dt, end_dt):
                 
             overall_attendances[player_name] += event_attendances[player_name] * event_minutes
     
+    average_attendance = 0 
     for player_name in overall_attendances:
         overall_attendances[player_name] /= total_events_minutes
+        average_attendance += overall_attendances[player_name]
         
-    return overall_attendances
+    average_attendance /= len(overall_attendances)
+    
+    return overall_attendances, {"minutes": total_events_minutes, "average_attendance": average_attendance}
 
 
 if __name__ == "__main__":
