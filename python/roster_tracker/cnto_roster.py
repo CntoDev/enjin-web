@@ -37,14 +37,20 @@ class RosterViewer(object):
         scrape_thread = ScrapeThread(self._viewer, start_dt, end_dt)
         scrape_thread.start()
 
+    def get_all_event_dates(self):
+        return self._db.get_all_event_dates()
+
     def database_loaded(self):
         return self._db is not None
+    
+    def clear_attendance_for_date(self, dt):
+        self._db.clear_attendance_for_date(dt)
     
     def set_database_directory(self, directory):
         print "Set db directory to %s" % (directory,)
         if directory is not None:
             try:
-                self._db = RosterDatabase(directory, strict=True)
+                self._db = RosterDatabase(directory, strict=False)
                 print "DB loaded from %s!" % (directory,)
                 self._config.last_loaded_dir = directory
             except Exception, e:
@@ -57,7 +63,7 @@ class RosterViewer(object):
         
         if self._viewer is not None:
             self._viewer.update_button_states()
-        
+            
 if __name__ == "__main__":
     app = RosterViewer()
     sys.exit(app.run())

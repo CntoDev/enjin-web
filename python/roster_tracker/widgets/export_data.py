@@ -20,7 +20,10 @@ class ExportDataWidget(QtGui.QWidget):
         self._layout.addWidget(self._end_calendar, 0, 1)
         
         self.setLayout(self._layout)
-        
+    
+    def refresh(self):
+        pass
+    
     def start_selected(self, date):
         self._end_calendar.setDateRange(date,
                                         self._end_calendar.maximumDate());

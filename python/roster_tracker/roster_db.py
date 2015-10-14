@@ -140,6 +140,29 @@ class RosterDatabase(object):
             
             self.insert_attendance(event_id, member_id, attendance_value)
     
+    def get_all_event_dates(self):
+        dts = []
+        with self._get_connection() as con:
+            cur = con.cursor()
+            cur.execute("SELECT (timestamp) FROM Event")
+            rows = cur.fetchall()
+            for row in rows:
+                time_tuple = time.gmtime(row[0])
+                dts.append(datetime(time_tuple.tm_year, time_tuple.tm_mon, time_tuple.tm_mday + 1))
+                
+        return dts
+    
+    def clear_attendance_for_date(self, dt):
+        event_id = self.get_event_id(dt)
+        if event_id is None:
+            return
+        
+        with self._get_connection() as con:
+            cur = con.cursor()
+            cur.execute("PRAGMA foreign_keys=1")
+            cur.execute("DELETE FROM Attendance WHERE event_id=%s" % (event_id, ))
+            cur.execute("DELETE FROM Event WHERE id=%s" % (event_id, ))
+    
     def initialize(self):
         with self._get_connection() as con:
             cur = con.cursor()
@@ -154,7 +177,7 @@ class RosterDatabase(object):
             cur.execute("CREATE TABLE Event(id INTEGER PRIMARY KEY, timestamp INTEGER, UNIQUE(timestamp))")
             cur.execute("CREATE TABLE Member(id INTEGER PRIMARY KEY, member_name, rank_id Integer REFERENCES Rank(id), member_group_id Integer REFERENCES MemberGroup(id), UNIQUE(member_name))")
             
-            cur.execute("CREATE TABLE Attendance(id INTEGER PRIMARY KEY, event_id Integer REFERENCES Event(id), member_id Integer REFERENCES Member(id), attendance REAL, UNIQUE (event_id, member_id))")
+            cur.execute("CREATE TABLE Attendance(id INTEGER PRIMARY KEY, event_id Integer REFERENCES Event(id) NOT NULL, member_id Integer REFERENCES Member(id) NOT NULL, attendance REAL, UNIQUE (event_id, member_id))")
     
     def backup(self):
         if os.path.exists(self._sqlite_filename):

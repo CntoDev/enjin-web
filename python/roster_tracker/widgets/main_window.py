@@ -40,6 +40,18 @@ class MainWindow(QtGui.QMainWindow):
         response = QtGui.QMessageBox.warning(self, header,
                                              message, flags)
     
+    @QtCore.Slot(object, object)
+    def ask_yes_no_question(self, header, question):
+        
+        flags = QtGui.QMessageBox.StandardButton.Yes
+        flags |= QtGui.QMessageBox.StandardButton.No
+        response = QtGui.QMessageBox.question(self, header,
+                                              question, flags)
+        if response == QtGui.QMessageBox.StandardButton.Yes:
+            return True
+        else:
+            return False
+    
     def update_button_states(self):
         if self._control.database_loaded():
             self._load_action.setEnabled(False)
@@ -80,9 +92,13 @@ class MainWindow(QtGui.QMainWindow):
     @QtCore.Slot(object)
     def show_busy(self, busy):
         if busy:
-            self.centralWidget().setEnabled(False)
+            if self.centralWidget() is not None:
+                self.centralWidget().setEnabled(False)
         else:
-            self.centralWidget().setEnabled(True)
+            if self.centralWidget() is not None:
+                self.centralWidget().refresh()
+                self.centralWidget().setEnabled(True)
+            
     
     def unload_db(self):
         self._control.set_database_directory(None)
