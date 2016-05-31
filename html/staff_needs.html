@@ -3,61 +3,51 @@
 <link rel="stylesheet" type="text/css" href="/styles/cnto.css">
 
 <style>
-  .role-high {
-    color: #b80000;
+  a.role-open {
+    color: #26ad45;
     font-weight: bold;
   }
     
-  .role-medium {
-    color: #e37e12;
-    font-weight: bold;
-  }
-    
-  .role-low {
-    color: #bd910d;
-    font-weight: bold;
-  }
-    
-  .role-closed {
-    color: #2c3326;
-    font-weight: bold;
+  .top-role-row {
+      border-top: none !important;
   }
   
-  .top-role-row {
-      border-top: none;
-      font-weight: bold;
+  .apply-now {
+      padding: 0 0 0 0 !important;
   }
   
 </style>
 
 <table class="table">
   <tr>
-    <td style="border-top: none;"><a href="http://carpenoctem.co/structure#rank-snco">SNCO</a></td><td style="border-top: none;" class="role-closed">Closed</td>
+    <td><a href="http://carpenoctem.co/structure#rank-spc">SPC</a></td><td><a class="role-open" href="http://carpenoctem.co/co#staff">Apply</a></td>
   </tr>
   <tr>
-    <td><a href="http://carpenoctem.co/structure#rank-nco">NCO</a></td><td class="role-low">Low</td>
+    <td><a href="http://carpenoctem.co/structure#branch-interviewer">Interviewer</a></td><td><a class="role-open" href="http://carpenoctem.co/co#int">Apply</a></td>
   </tr>
   <tr>
-    <td><a href="http://carpenoctem.co/structure#rank-jrnco">JrNCO</a></td><td class="role-medium">Medium</td>
+    <td><a href="http://carpenoctem.co/structure#branch-mmaker">Mission Maker</a></td><td><a class="role-open" href="http://carpenoctem.co/co#tr">Apply</a></td>
   </tr>
   <tr>
-    <td><a href="http://carpenoctem.co/structure#rank-spc">SPC</a></td><td class="role-medium">Medium</td>
+    <td><a href="http://carpenoctem.co/structure#branch-rnd">Research & Development</a></td><td><a class="role-open" href="http://carpenoctem.co/co#mmt">Apply</a></td>
   </tr>
   <tr>
-    <td><a href="http://carpenoctem.co/structure#branch-interviewer">Interviewer</a></td><td class="role-high">High</td>
+    <td><a href="http://carpenoctem.co/structure#branch-trainer">Trainer</a></td><td><a class="role-open" href="http://carpenoctem.co/co#rnd">Apply</a></td>
   </tr>
   <tr>
-    <td><a href="http://carpenoctem.co/structure#branch-mmaker">Mission Maker</a></td><td class="role-medium">Medium</td>
+    <td><a href="http://carpenoctem.co/structure#branch-designer">Web Designer</a></td><td><a class="role-open" href="http://carpenoctem.co/co#wd">Apply</a></td>
   </tr>
+  <!---
   <tr>
-    <td><a href="http://carpenoctem.co/structure#branch-promoter">Public Relations</a></td><td class="role-low">Low</td>
+    <td colspan="2" class="top-role-row apply-now"><a class="apply-branch-button" href="/promotions">Apply now</a></td>
   </tr>
-  <tr>
-    <td><a href="http://carpenoctem.co/structure#branch-trainer">Trainer</a></td><td class="role-high">High</td>
-  </tr>
-  <tr>
-    <td><a href="http://carpenoctem.co/structure#branch-vmaker">Video Maker</a></td><td class="role-low">Low</td>
-  </tr>
+  !--->
 </table>
+
+<script>
+  $( document ).ready(function() {
+      $('.table td').removeAttr("style");
+  });
+</script>
 
 @@include(".includes/after.html")
