@@ -1,0 +1,28 @@
+.airborne-ribbon {
+  background: white url("images/ribbons/airborne.jpg") no-repeat 50% 0px;
+  display: block;
+  background-size: 66%;
+  width: 150px;
+  padding: 25px 0 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pilot-ribbon {
+  background: white url("images/ribbons/pilot.jpg") no-repeat 50% 0px;
+  display: block;
+  alignment: center;
+  background-size: 66%;
+  width: 150px;
+  padding: 25px 0 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qualifications table th {
+  width: 33%;
+}
+
+table tr td.qualification-header {
+  text-align: left;
+}
