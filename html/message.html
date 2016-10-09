@@ -1,0 +1,835 @@
+@@include(".includes/before.html")
+
+<link rel="stylesheet" type="text/css" href="/styles/cnto.css">
+<script src="/scripts/cnto.js"></script>
+
+<div class="v2_system_dashboard main_container">
+	<div class="dashboard_menu v2_sticky">
+	<a class="menu_link " href="http://carpenoctem.co/dashboard/activity" data-href-default="/dashboard/activity" style="display: block;">
+		<div class="menu_icon fa fa-globe"></div>
+		Activity	</a>
+	
+	<a class="menu_link menu_selected" href="http://carpenoctem.co/dashboard/messages" data-href-default="/dashboard/messages" style="display: block;">
+		<div class="menu_alert hide" data-type="new_messages" style="display: none;"></div>
+		<div class="menu_icon fa fa-envelope"></div>
+		Messages	</a>
+	
+	<a class="menu_link " href="http://carpenoctem.co/dashboard/applications" data-href-default="/dashboard/applications" style="display: block;">
+		<div class="menu_alert hide" data-type="new_applications">
+			0		</div>
+		<div class="menu_icon fa fa-list-alt"></div>
+		Applications	</a>
+	
+		<a class="menu_link " href="http://carpenoctem.co/dashboard/friends" data-href-default="/dashboard/friends" style="display: block;">
+		<div class="menu_alert hide " data-type="friend_requests">
+			0		</div>
+		<div class="menu_icon fa fa-users"></div>
+		Friends	</a>
+
+	
+    <a class="menu_link " href="http://carpenoctem.co/dashboard/communities" data-href-default="/dashboard/communities" style="display: block;">
+		<div class="menu_icon fa fa-globe"></div>
+		Communities	</a>
+
+	<a class="menu_link " href="http://carpenoctem.co/dashboard/recruitment" data-href-default="/dashboard/recruitment" style="display: none;">
+		<div class="menu_icon fa fa-bullhorn"></div>
+		Recruitment	</a>
+	
+	<a class="menu_link " href="http://carpenoctem.co/dashboard/forum" data-href-default="/dashboard/forum" style="display: none;">
+		<div class="menu_icon fa fa-file"></div>
+		Forum Feeds	</a>
+	
+	<a class="menu_link " href="http://carpenoctem.co/dashboard/account" data-href-default="/dashboard/account" style="display: none;">
+		<div class="menu_icon fa fa-user"></div>
+		Account	</a>
+	
+		<a class="menu_link " href="http://carpenoctem.co/dashboard/website/create" data-href-default="/dashboard/website/create" style="display: none;">
+		<div class="menu_icon fa fa-cog"></div>
+		Website	</a>
+
+	<a class="menu_link hide" href="" style="display: block;">
+		<div class="menu_icon menu_v2icon"></div>
+		More Items	</a>
+	
+	<div class="menu_popup hide" style="display: none; width: 342px;">
+		<div class="menu_popup_inner">
+			<div class="menu_popup_arrow">
+				<div class="menu_popup_arrow_inner">
+					<div class="menu_popup_arrow_inner_bg"></div>
+				</div>
+			</div>
+			<div class="menu_popup_links"><a class="menu_link " href="http://carpenoctem.co/dashboard/recruitment" data-href-default="/dashboard/recruitment" style="display: inline-block;">
+		<div class="menu_icon fa fa-bullhorn"></div>
+		Recruitment	</a><a class="menu_link " href="http://carpenoctem.co/dashboard/forum" data-href-default="/dashboard/forum" style="display: inline-block;">
+		<div class="menu_icon fa fa-file"></div>
+		Forum Feeds	</a><a class="menu_link " href="http://carpenoctem.co/dashboard/account" data-href-default="/dashboard/account" style="display: inline-block;">
+		<div class="menu_icon fa fa-user"></div>
+		Account	</a><a class="menu_link " href="http://carpenoctem.co/dashboard/website/create" data-href-default="/dashboard/website/create" style="display: inline-block;">
+		<div class="menu_icon fa fa-cog"></div>
+		Website	</a></div>
+		</div>
+	</div>
+</div>
+	<div class="menu_arrow v2_sticky" style="display: block; margin-top: 89px;">
+		<div class="menu_arrow_inner">
+			<div class="menu_arrow_inner_bg"></div>
+		</div>
+	</div>
+
+	<div class="middle">
+		<div class="middle_inner">
+						<div class="messages" data-dark-theme="">
+	
+<div class="message_header" data-total="0">
+	<div class="message_header_tab go_to_page active" href="/dashboard/messages">
+		<span class="message_header_text">
+			Inbox		</span>
+		<div class="message_header_total inactive">0</div>
+	</div>
+	<div class="message_header_tab go_to_page " href="/dashboard/messages/updates">
+		<span class="message_header_text">
+			Updates		</span>
+		<div class="message_header_total inactive">0</div>
+	</div>
+	<div class="message_header_tab go_to_page " href="/dashboard/messages/reports">
+		<span class="message_header_text">
+			Reports		</span>
+		<div class="message_header_total inactive">0</div>
+	</div>
+	<div class="message_header_tab go_to_page " href="/dashboard/messages/notices">
+		<span class="message_header_text">
+			Notices		</span>
+		<div class="message_header_total inactive">0</div>
+	</div>
+	
+	<div class="message_header_actions">
+		<div class="message_header_tab message_header_folder">
+			<span class="fa fa-folder"></span>
+			<span class="fa fa-caret-down"></span>
+		</div>
+		<div class="message_header_folder_menu element_popup" style="display: none;">
+			<div class="inner">
+				<p>
+					<a class="go_to_page" href="http://carpenoctem.co/dashboard/messages/folder?folder_id=sent">
+						Sent					</a>
+				</p>				
+								<hr>
+				<p>
+					<a class="message_header_folder_create" href="">
+						Create Folder					</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="message_header_tab message_header_settings go_to_page " href="/dashboard/messages/settings">
+			<span class="fa fa-cog"></span>
+		</div>
+		
+		<div class="message_header_tab message_header_compose go_to_page " href="/dashboard/messages/compose">
+			<span class="fa fa-envelope"></span>
+			<span>Compose</span>
+		</div>
+	</div>
+	
+	<div class="v2_system_dashboard folder_create_window hide" data-title="Create Mail Folder">
+		<form class="folder_create_form" method="post" action="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=folder_create">
+			<div class="form_text">
+				Folder Name			</div>
+			<div class="form_field input-text">
+				<input type="text" name="name" maxlength="24">
+			</div>
+			<ul class="form_errors hide"></ul>
+			<div class="element_button">
+				<div class="l"></div>
+				<div class="r"></div>
+				<input type="submit" value="Create Folder" data-loading="Processing..." data-start="Create Folder">
+			</div>
+			or			<a class="close" href="">Cancel</a>
+		</form>
+	</div>
+</div>	<div class="message_sidebar">
+	<div class="message_sidebar_meta message_sidebar_top">
+		
+		<div class="message_sidebar_search">
+			<div class="input-text">
+				<span class="message_sidebar_search_cancel fa fa-times"></span>
+				<input type="text" name="q" autocomplete="off" data-url="/ajax.php?s=dashboard_messages&amp;cmd=search&amp;section=index" placeholder="Search Inbox">
+			</div>
+		</div>
+		<div class="message_sidebar_read">
+						<a class="message_sidebar_mark_read" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=read_all&amp;location=index" data-done="Done">
+				Mark All Read			</a>
+							<a class="right message_sidebar_show_unread go_to_page" href="http://carpenoctem.co/dashboard/messages/?unread=1">
+					Show Unread				</a>
+					</div>
+	</div>
+	<div class="message_sidebar_container">
+		<div class="message_sidebar_loading hide">
+			<img src="./Dashboard - Carpe Noctem - Enjin_files/loader.gif">
+		</div>
+		<div class="message_sidebar_results">
+			<div class="message_sidebar_block_search_found message_sidebar_block selected hide">
+				<div class="message_search_close fa fa-times"></div>
+				<div class="message_search_found">
+					<span></span>
+					Results Found				</div>
+				<div class="message_search_text"></div>
+			</div>
+			<div class="message_sidebar_block_search_empty message_sidebar_block read hide">
+				<div class="message_search_none">
+					No results found				</div>
+			</div>
+
+			<div class="message_sidebar_block_msgs" data-url="/ajax.php?s=dashboard_messages&amp;cmd=index&amp;list=1">
+                
+    <div class="message_sidebar_block_msgs_chunk" data-page="1">
+                    <a class="message_sidebar_block selected                read" data-id="14855941" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=14855941" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.1434890353.jpeg">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Freghar
+                        <div class="message_user_date">
+                            6 hours ago                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        website/forum not indenting li...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="16048925" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=16048925" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=16048925">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.png">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        haze
+                        <div class="message_user_date">
+                            Mar 15, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: Star Citi...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="16020168" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=16020168" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=16020168">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.png">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Skywalker
+                        <div class="message_user_date">
+                            Mar 12, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: Siege Eve...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="15990494" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=15990494" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=15990494">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.1412003243.jpeg">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Chris
+                        <div class="message_user_date">
+                            Mar 8, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: ESL Ladde...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="15969321" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=15969321" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=15969321">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.png">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Skywalker
+                        <div class="message_user_date">
+                            Mar 6, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: ESL Ladde...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="15969290" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=15969290" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=15969290">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.png">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Skywalker
+                        <div class="message_user_date">
+                            Mar 6, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: Siege Int...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="15947349" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=15947349" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=15947349">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.1412003243.jpeg">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Chris
+                        <div class="message_user_date">
+                            Mar 4, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: Siege ESL...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="15932975" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=15932975" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=15932975">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.1412003243.jpeg">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Chris
+                        <div class="message_user_date">
+                            Mar 2, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: Siege ESL...                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="15473029" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=15473029" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=15473029">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Supreme
+                        <div class="message_user_date">
+                            Jan 18, 16                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Request for discharge                    </div>
+                </div>
+            </a>
+                    <a class="message_sidebar_block clickable                read" data-id="14814203" data-url="/ajax.php?s=dashboard_messages&amp;cmd=message&amp;pm_id=14814203" href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14814203">
+                
+                                    <div class="message_user_check hide">
+                        <span class="unchecked fa fa-square-o"></span>
+                        <span class="checked fa fa-check-square-o hide"></span>
+                    </div>
+                                
+                <img class="message_user_avatar" src="./Dashboard - Carpe Noctem - Enjin_files/medium.1413104263.jpeg">
+                <div class="message_user_details">
+                    <div class="message_user_name">
+                        Ryujin
+                        <div class="message_user_date">
+                            Dec 6, 15                        </div>
+                    </div>
+                    <div class="message_user_text">
+                        Invitation to event: Coop: TBA                    </div>
+                </div>
+            </a>
+            </div>
+			</div>
+		</div>
+	</div>
+	<div class="message_sidebar_bulk">        
+                    <div class="message_sidebar_pagination">
+                <span class="message_sidebar_pagination_text">
+                    <span class="message_sidebar_page_current">1</span>
+                    of
+                    <span class="message_sidebar_page_last">11</span>
+                </span>
+                <div class="message_sidebar_page_prev element_smallbutton">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <input type="button" value="&lt;">
+                </div>
+                <div class="message_sidebar_page_next element_smallbutton">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <input type="button" value="&gt;">
+                </div>
+            </div>
+                
+		<div class="message_sidebar_bulk_off">
+			<a class="message_sidebar_bulk_turn_on" href="">Bulk Edit</a>
+		</div>
+		<div class="message_sidebar_bulk_on hide">			
+			<span class="message_sidebar_bulk_actions">
+				<a href="">Bulk Mode</a>
+				<span class="fa fa-caret-up"></span>
+			</span>
+			<div class="message_sidebar_actions_menu element_popup hide">
+				<div class="inner">
+                    <p>
+                        <a class="message_sidebar_bulk_turn_off" href="">
+                            Stop Bulk Mode                        </a>
+                    </p>
+					<p>
+						<a class="bulk_action_link" data-action="archive" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=archive">
+							Archive						</a>
+					</p>
+					<p>
+						<a class="bulk_action_link" data-action="unread" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=unread">
+							Mark Unread						</a>
+					</p>
+					<p>
+						<a class="bulk_action_link" data-action="delete" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=delete">
+							Delete						</a>
+					</p>
+					<p>
+						<a class="bulk_action_move" href="">
+							Move to Folder						</a>
+					</p>
+				</div>
+			</div>
+			<div class="v2_system_dashboard folders_window folders_bulk_window hide" data-title="Move to Folder">
+				<p>
+					<a href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=move&amp;folder_id=inbox" class="bulk_action_link" data-action="move">
+						Inbox					</a>
+				</p>
+							</div>
+		</div>
+	</div>	
+</div>	
+	<div class="message_inner message_inner_main_area">
+		<div class="message_inner_container">
+			<div class="message_inner_loading hide" style="display: none;">
+				<img src="./Dashboard - Carpe Noctem - Enjin_files/loader.gif">
+			</div>
+			<div class="message_inner_empty hide">
+				No messages in Inbox			</div>			
+			<div class="message_inner_container_block" style="display: block;">
+<div class="message_inner_title message_inner_extra">
+	<span>website/forum not indenting lists</span>
+	<div class="message_inner_actions new_line">
+		<div class="message_inner_recipients" data-recipients="[{&quot;type&quot;:&quot;user&quot;,&quot;user_id&quot;:&quot;12235851&quot;,&quot;last_activity&quot;:&quot;1459278161&quot;},{&quot;type&quot;:&quot;user&quot;,&quot;user_id&quot;:&quot;13633351&quot;,&quot;last_activity&quot;:&quot;1459274800&quot;}]">
+			                									<img src="./Dashboard - Carpe Noctem - Enjin_files/small.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/small.png&#39;;" class="message_inner_avatar" width="23" height="23">							                									<img src="./Dashboard - Carpe Noctem - Enjin_files/small.1434890353.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/small.png&#39;;" class="message_inner_avatar" width="23" height="23">									</div>
+
+		<div class="v2_system_dashboard recipients_window hide" data-title="Sent To">
+							<div class="block">
+											<img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" class="block_image" width="43" height="43">						<div class="block_details">
+							<div class="block_name">
+								<a href="http://carpenoctem.co/profile/12235851" target="_blank" class="element_username">Supreme</a> 							</div>
+							<div class="block_meta">
+								Last Seen:
+								22 mins ago							</div>
+						</div>
+									</div>
+							<div class="block">
+											<img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1434890353.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" class="block_image" width="43" height="43">						<div class="block_details">
+							<div class="block_name">
+								<a href="http://carpenoctem.co/profile/13633351" target="_blank" class="element_username">Freghar</a> 							</div>
+							<div class="block_meta">
+								Last Seen:
+								1 hour ago							</div>
+						</div>
+									</div>
+					</div>
+        
+        <div class="right">       
+                            <div class="action_archive message_inner_action_button element_smallbutton" data-url="/ajax.php?s=dashboard_messages&amp;cmd=archive&amp;pm_id=14855941">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <div class="button_block">Archive</div>
+                </div>
+            
+            <div class="action_delete message_inner_action_button element_smallbutton" data-url="/ajax.php?s=dashboard_messages&amp;cmd=delete&amp;pm_id=14855941" data-confirm="Are you sure?">
+                <div class="l"></div>
+                <div class="r"></div>
+                <div class="button_block">Delete</div>
+            </div>
+
+                            <div class="action_more message_inner_action_button element_smallbutton">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <div class="button_block">
+                        More                        <span class="fa fa-caret-down"></span>
+                    </div>
+                </div>
+                    
+            <div class="message_inner_actions_menu element_popup" style="display: none;">
+                <div class="inner">
+                    <p class="hide">
+                        <a class="action_read" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=read&amp;pm_id=14855941">
+                            Mark Read                        </a>
+                    </p>
+                    <p class="">
+                        <a class="action_unread" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=unread&amp;pm_id=14855941">
+                            Mark Unread                        </a>
+                    </p>
+                    <p class="hide">
+                        <a class="action_add_user" href="">Add User to Mail</a>
+                    </p>
+                    <p class="">
+                        <a class="action_move" href="">
+                            Move to Folder                        </a>
+                    </p>
+                    <p class="">
+                        <a class="action_unsubscribe" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=unsubscribe&amp;pm_id=14855941">
+                            Unsubscribe                        </a>
+                    </p>
+                    <p class="hide">
+                        <a class="action_subscribe" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=subscribe&amp;pm_id=14855941">
+                            Subscribe                        </a>
+                    </p>
+                    <p class="hide">
+                        <a class="action_lock" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=lock&amp;pm_id=14855941">
+                            Lock Replies                        </a>
+                    </p>
+                    <p class="hide">
+                        <a class="action_unlock" href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=unlock&amp;pm_id=14855941">
+                            Unlock Replies                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="v2_system_dashboard folders_window folders_pm_window hide" data-title="Move to Folder">
+                <p>
+                    <a href="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=move&amp;folder_id=inbox" class="action_move_confirm 
+                        hide">
+                        Inbox                    </a>
+                </p>
+                            </div>
+
+            <div class="v2_system_dashboard user_add_window hide" data-title="Add User to Mail">
+                <div class="user_title">
+                    Select user(s) to add to this message                </div>
+                <div class="user_search">
+                    <div class="input-text">
+                        <input class="user_search_val" type="text">
+                    </div>
+                </div>
+                <div class="users">
+                    <div class="user_template hide" data-id="">
+                        <img class="user_avatar" src="" width="23" height="23">
+                        <a class="user_link" href="" target="_blank"></a>
+                        <span class="user_remove fa fa-times"></span>
+                    </div>
+                </div>
+                <div class="close element_button">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <input type="button" value="Cancel">
+                </div>
+                <div class="user_add element_button">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <input type="button" value="Add to Mail">
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<div class="message_inner_list message_inner_area">
+	<div class="message_inner_user_block_container">
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="Freghar" data-minitooltip-userid="13633351" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/13633351"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1434890353.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						Dec 10, 15					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/13633351" target="_blank" class="element_username">Freghar</a> 						<div class="message_user_quote">
+							Last Seen:
+							1 hour ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Hey Supreme,<br>
+I've heard you have something to do with website administration for CNTO - if not, please ignore this. <img src="./Dashboard - Carpe Noctem - Enjin_files/smiley.gif" alt=":)" title=":)" class="bbcode_smiley"><br>
+<br>
+Is there a chance you could fix (or find out what's wrong with) indenting of lists generated from bbcode (both "list" and "list=1")? When the item text is longer than a line and gets wrapped, the next line starts before the actual item mark (dot or number), making multi-line items very hard to read when surrounded by other paragraphs of text.<br>
+<br>
+Demo:
+<ul class="bbcode_list">
+<li>single line item</li>
+<li>another single line</li>
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper commodo purus ac porta. Ut ac aliquam velit. Morbi at pharetra arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas accumsan nisl non rutrum tincidunt. Fusce lacinia ipsum at enim maximus dignissim. Ut erat mauris, commodo sodales ex et, sollicitudin volutpat ante.</li>
+<li>more items</li>
+</ul>
+<br>
+Any chance this could be caused by custom CSS? (html &lt;li&gt; have a default padding of 40px unless overriden)<br>
+<br>
+Thanks,<br>
+Fr<br>
+                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="supremefist" data-minitooltip-userid="12235851" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/12235851"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						Dec 10, 15					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/12235851" target="_blank" class="element_username">Supreme</a> 						<div class="message_user_quote">
+							Last Seen:
+							22 mins ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Hey man,<br>
+<br>
+Yes, I am involved!<br>
+<br>
+I'm sure it must be our custom styling.  Thanks for notifying me - I will see what I can do!<br>
+<br>
+Laters,<br>
+Supreme<br>
+<br>
+                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="supremefist" data-minitooltip-userid="12235851" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/12235851"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						Dec 17, 15					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/12235851" target="_blank" class="element_username">Supreme</a> 						<div class="message_user_quote">
+							Last Seen:
+							22 mins ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Hey man,<br>
+<br>
+Hellfire checked it out, here is his reply:<br>
+
+<div class="bbcode_quote">
+<div class="bbcode_quote_decorator"><!-- --></div>
+<div class="bbcode_quote_head"><div class="element_avatar simple tiny"><a data-minitooltip="Hellfire" data-minitooltip-userid="12674862" href="http://www.carpenoctem.co/profile/12674862"><img src="./Dashboard - Carpe Noctem - Enjin_files/tiny.1424300577.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/tiny.png&#39;;" width="16" height="16"></a></div><div class="user"><a href="http://carpenoctem.co/profile/12674862" class="element_username tag-1165134">Hellfire</a> </div> wrote:</div>
+<div class="bbcode_quote_body">I can explain:<br>
+<br>
+it's in enjin's bbcode.css<br>
+<br>
+On the tag .bbcode_list { list-style:inside ; } , the inside argument has been put explicitly. It seems they use this trick, as without it, you can see the result in my screenshot below. I think the bullet list doesn't fit anymore in the overall post container. I thought we could override the behaviour, but the 'cheat' from enjin, seem to have its reasons.<br>
+<br>
+[img]https://camo.githubusercontent.com/42f660e34bbc45245f1fb3175ccc2fcf976a2511/687474703a2f2f692e696d6775722e636f6d2f5662426a4651352e706e67[/img]</div>
+</div>
+                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="Freghar" data-minitooltip-userid="13633351" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/13633351"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1434890353.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						Dec 17, 15					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/13633351" target="_blank" class="element_username">Freghar</a> 						<div class="message_user_quote">
+							Last Seen:
+							1 hour ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Ah, I see. Thanks for trying anyway. <img src="./Dashboard - Carpe Noctem - Enjin_files/smiley.gif" alt=":)" title=":)" class="bbcode_smiley">                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="Freghar" data-minitooltip-userid="13633351" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/13633351"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1434890353.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						Dec 20, 15					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/13633351" target="_blank" class="element_username">Freghar</a> 						<div class="message_user_quote">
+							Last Seen:
+							1 hour ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Just an update to this, I spent a few minutes playing with it (as I distinctly remember list-style outside working with tables just fine) and came up with the following, which fixes the issue:<br>
+<br>
+<div class="bbcode_code"><div class="bbcode_code_head">Code: <a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" onclick="Enjin_Core.selectText($(this).closest(&#39;.bbcode_code&#39;).find(&#39;.bbcode_code_body&#39;));return false;">Select All</a></div><div class="bbcode_code_body" style="white-space:pre">
+.bbcode_list {
+    padding-left: 20px;
+    list-style-position: outside;
+}
+</div></div><br>
+(if it doesn't work, just add !important to override Enjin's defaults).<br>
+<br>
+<a href="http://i.imgur.com/6hJl7Lz.png" target="_blank" rel="nofollow">http://i.imgur.com/6hJl7Lz.png</a><br>
+<br>
+Works on regular forum threads as well as in PMs.<br>
+                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="Freghar" data-minitooltip-userid="13633351" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/13633351"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1434890353.jpeg" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						6 hours ago					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/13633351" target="_blank" class="element_username">Freghar</a> 						<div class="message_user_quote">
+							Last Seen:
+							1 hour ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Hey Supreme,<br>
+any update on this? .. Seems like I found a pretty well working solution (see above), but I don't have any way of actually testing whether it would work when put in one of the .scss files (whether Enjin overrides it or not).<br>
+<br>
+Would be great to get actually readable lists.<br>
+<br>
+Thanks.<br>
+<img src="./Dashboard - Carpe Noctem - Enjin_files/smiley.gif" alt=":)" title=":)" class="bbcode_smiley">                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="supremefist" data-minitooltip-userid="12235851" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/12235851"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						6 hours ago					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/12235851" target="_blank" class="element_username">Supreme</a> 						<div class="message_user_quote">
+							Last Seen:
+							22 mins ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					It is definitely something we could do, but as Hellfire said above "It seems they use this trick, as without it, you can see the result in my screenshot below. I think the bullet list doesn't fit anymore in the overall post container. I thought we could override the behaviour, but the 'cheat' from enjin, seem to have its reasons."<br>
+<br>
+Thus, by making this change, we will be breaking other things!  That is why we haven't made the change yet.  I call it a "change" instead of a "fix" as it is not a global improvement.<br>
+<br>
+Hope that provides you with satisfaction!<br>
+<br>
+Supreme                    
+                    				</div>
+			</div>
+					<div class="message_inner_user_block">
+				<div class="message_user_header">
+					<a data-minitooltip="supremefist" data-minitooltip-userid="12235851" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/12235851"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>					<div class="message_user_date">
+						6 hours ago					</div>
+					<div class="message_user_details">
+						<a href="http://carpenoctem.co/profile/12235851" target="_blank" class="element_username">Supreme</a> 						<div class="message_user_quote">
+							Last Seen:
+							22 mins ago						</div>
+					</div>
+				</div>
+				<div class="message_user_text">
+					Although, I see now that he made a different change.  I will do a proper test locally.<br>
+<br>
+Supreme                    
+                    				</div>
+			</div>
+			</div>
+	<div class="message_inner_user_block_template hide">
+		<div class="message_inner_user_block">
+			<div class="message_user_header">
+				<a data-minitooltip="supremefist" data-minitooltip-userid="12235851" class="message_user_avatar" target="_blank" href="http://www.carpenoctem.co/profile/12235851"><img src="./Dashboard - Carpe Noctem - Enjin_files/medium.1424240709.gif" onerror="this.src=&#39;http://resources.guild-hosting.net/profile/images/avatar/medium.png&#39;;" width="43" height="43"></a>				<div class="message_user_date" data-time="Just now">
+					Live preview				</div>
+				<div class="message_user_details">
+					<a href="http://carpenoctem.co/profile/12235851" target="_blank" class="element_username">Supreme</a> 					<div class="message_user_quote">
+						Last Seen:
+						Mar 22, 16					</div>
+				</div>
+			</div>
+			<div class="message_user_text"></div>
+		</div>
+	</div>
+</div>
+
+<div class="message_inner_write message_inner_extra ">
+    <div class="message_inner_write_post">
+        <div class="message_inner_textarea">
+            <div style="position:relative"><div class="markItUpHeader" style="height: 26px;"><ul><li class="markItUpButton markItUpButton1 clean icon-trash" style="background-position: 0px 0px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Clean">Clean</a></li><li class="markItUpButton markItUpButton2 icon-bold" style="background-position: 0px -270px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" accesskey="B" data-minitooltip="Bold [Ctrl+B]">Bold</a></li><li class="markItUpButton markItUpButton3 icon-italic" style="background-position: 0px -300px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" accesskey="I" data-minitooltip="Italic [Ctrl+I]">Italic</a></li><li class="markItUpButton markItUpButton4 icon-underline" style="background-position: 0px -330px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" accesskey="U" data-minitooltip="Underline [Ctrl+U]">Underline</a></li><li class="markItUpButton markItUpButton5 icon-font" style="background-position: 0px -30px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" accesskey="S" data-minitooltip="Size [Ctrl+S]">Size</a></li><li class="markItUpButton markItUpButton6 icon-brush" style="background-position: 0px -60px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Colors">Colors</a></li><li class="markItUpButton markItUpButton7 icon-square" style="background-position: 0px -990px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Highlight">Highlight</a></li><li class="markItUpButton markItUpButton8 icon-smile" style="background-position: 0px -90px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Insert Smiley">Insert Smiley</a></li><li class="markItUpButton markItUpButton9 icon-link" style="background-position: 0px -150px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Link">Link</a></li><li class="markItUpButton markItUpButton10 icon-quote" style="background-position: 0px -180px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Quote">Quote</a></li><li class="markItUpButton markItUpButton11 icon-picture" style="background-position: 0px -120px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Image">Image</a></li><li class="markItUpButton markItUpButton12 icon-youtube-play" style="background-position: 0px -630px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="YouTube">YouTube</a></li><li class="markItUpButton markItUpButton13 icon-question" style="background-position: 0px -540px;"><a href="http://carpenoctem.co/dashboard/messages/msg?pm_id=14855941#" data-minitooltip="Spoiler">Spoiler</a></li></ul></div><div class="markitup-bucket"></div></div><div class="input-textarea"><textarea data-smileys="{&quot;:)&quot;:{&quot;smiley_id&quot;:&quot;51&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:)&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/smiley.gif?0&quot;},&quot;:(,&quot;:{&quot;smiley_id&quot;:&quot;49&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:(,&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/smiley.gif?0&quot;},&quot;:|&quot;:{&quot;smiley_id&quot;:&quot;48&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:|&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/blank.gif?0&quot;},&quot;:mad:&quot;:{&quot;smiley_id&quot;:&quot;47&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:mad:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/angry.gif?0&quot;},&quot;:X&quot;:{&quot;smiley_id&quot;:&quot;45&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:X&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/angry.gif?0&quot;},&quot;:-X&quot;:{&quot;smiley_id&quot;:&quot;43&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-X&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/angry.gif?0&quot;},&quot;:angry:&quot;:{&quot;smiley_id&quot;:&quot;42&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:angry:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/angry.gif?0&quot;},&quot;:anxious:&quot;:{&quot;smiley_id&quot;:&quot;41&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:anxious:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/anxious.gif?0&quot;},&quot;:-|&quot;:{&quot;smiley_id&quot;:&quot;40&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-|&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/blank.gif?0&quot;},&quot;:confused:&quot;:{&quot;smiley_id&quot;:&quot;39&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:confused:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/confused.gif?0&quot;},&quot;:?&quot;:{&quot;smiley_id&quot;:&quot;38&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:?&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/confused.gif?0&quot;},&quot;:-?&quot;:{&quot;smiley_id&quot;:&quot;37&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-?&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/confused.gif?0&quot;},&quot;:cool:&quot;:{&quot;smiley_id&quot;:&quot;36&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:cool:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/cool.gif?0&quot;},&quot;8-)&quot;:{&quot;smiley_id&quot;:&quot;35&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;8-)&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/cool.gif?0&quot;},&quot;8)&quot;:{&quot;smiley_id&quot;:&quot;34&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;8)&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/cool.gif?0&quot;},&quot;:cry:&quot;:{&quot;smiley_id&quot;:&quot;33&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:cry:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/cry.gif?0&quot;},&quot;:oops:&quot;:{&quot;smiley_id&quot;:&quot;32&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:oops:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/embarassed.gif?0&quot;},&quot;:-)&quot;:{&quot;smiley_id&quot;:&quot;31&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-)&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/smiley.gif?0&quot;},&quot;:LOL:&quot;:{&quot;smiley_id&quot;:&quot;29&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:LOL:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/laugh.gif?0&quot;},&quot;;-)&quot;:{&quot;smiley_id&quot;:&quot;28&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;;-)&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/wink.gif?0&quot;},&quot;;)&quot;:{&quot;smiley_id&quot;:&quot;27&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;;)&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/wink.gif?0&quot;},&quot;:-(&quot;:{&quot;smiley_id&quot;:&quot;26&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-(&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/sad.gif?0&quot;},&quot;:thumb:&quot;:{&quot;smiley_id&quot;:&quot;25&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:thumb:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/thumbsup.gif?0&quot;},&quot;:-d&quot;:{&quot;smiley_id&quot;:&quot;23&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-d&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/grin.gif?0&quot;},&quot;:d&quot;:{&quot;smiley_id&quot;:&quot;22&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:d&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/grin.gif?0&quot;},&quot;:dead:&quot;:{&quot;smiley_id&quot;:&quot;21&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:dead:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/dead.gif?0&quot;},&quot;:shock:&quot;:{&quot;smiley_id&quot;:&quot;19&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:shock:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/stunned.gif?0&quot;},&quot;:o&quot;:{&quot;smiley_id&quot;:&quot;18&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:o&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/shocked.gif?0&quot;},&quot;:-o&quot;:{&quot;smiley_id&quot;:&quot;17&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-o&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/shocked.gif?0&quot;},&quot;:evil:&quot;:{&quot;smiley_id&quot;:&quot;16&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:evil:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/evil.gif?0&quot;},&quot;:roll:&quot;:{&quot;smiley_id&quot;:&quot;15&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:roll:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/rolleyes.gif?0&quot;},&quot;:rolls:&quot;:{&quot;smiley_id&quot;:&quot;14&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:rolls:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/rolleyes.gif?0&quot;},&quot;:rolleyes:&quot;:{&quot;smiley_id&quot;:&quot;13&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:rolleyes:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/rolleyes.gif?0&quot;},&quot;:rollseyes:&quot;:{&quot;smiley_id&quot;:&quot;12&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:rollseyes:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/rolleyes.gif?0&quot;},&quot;:P&quot;:{&quot;smiley_id&quot;:&quot;10&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:P&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/tongue.gif?0&quot;},&quot;:-P&quot;:{&quot;smiley_id&quot;:&quot;8&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:-P&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/tongue.gif?0&quot;},&quot;:furious:&quot;:{&quot;smiley_id&quot;:&quot;7&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:furious:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/furious.gif?0&quot;},&quot;:idea:&quot;:{&quot;smiley_id&quot;:&quot;6&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:idea:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/idea.gif?0&quot;},&quot;:snore:&quot;:{&quot;smiley_id&quot;:&quot;5&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:snore:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/snore.gif?0&quot;},&quot;:undecided:&quot;:{&quot;smiley_id&quot;:&quot;4&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:undecided:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/undecided.gif?0&quot;},&quot;:geek:&quot;:{&quot;smiley_id&quot;:&quot;3&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:geek:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/geek.gif?0&quot;},&quot;:dizzy:&quot;:{&quot;smiley_id&quot;:&quot;2&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:dizzy:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/dizzy.gif?0&quot;},&quot;:sick:&quot;:{&quot;smiley_id&quot;:&quot;1&quot;,&quot;smiley_pack_id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;:sick:&quot;,&quot;icon_name&quot;:null,&quot;last_icon_update&quot;:&quot;0&quot;,&quot;icon&quot;:&quot;http:\/\/resources.guild-hosting.net\/201603271702\/themes\/core\/images\/smileys\/sick.gif?0&quot;}}" autocomplete="off" placeholder="Write Reply" style="height: 250px;"></textarea></div><div class="markItUpFooter"></div>
+        </div>
+        <div class="message_inner_send message_inner_write_reply element_button">
+            <div class="l"></div>
+            <div class="r"></div>
+            <input type="button" value="Send Reply" data-loading="Sending" data-start="Send Reply" data-url="/ajax.php?s=dashboard_messages&amp;cmd=post_reply&amp;location=0&amp;pm_id=14855941">
+        </div> &nbsp;         
+        <div class="message_inner_preview_button element_button">
+            <div class="l"></div>
+            <div class="r"></div>
+            <input type="button" value="Preview">
+        </div>
+    </div>
+</div>
+</div>			
+		</div>
+	</div>
+    <div class="ban_user_popup hide">
+        <form method="post" action="http://carpenoctem.co/ajax.php?s=dashboard_messages&amp;cmd=ban">
+            <div class="form_elem">
+                <input class="form_radio" type="radio" name="ban_type" value="permanent" id="bantype1" checked="checked">
+                <label for="bantype1" class="form_text">Ban Permanently</label>
+            </div>
+            <div class="form_elem">
+                <input class="form_radio" type="radio" name="ban_type" value="expire_after" id="bantype2">
+                <label for="bantype2" class="form_text">Ban will expire after</label>
+            </div>
+            <div class="form_elem_padded">
+                <div class="expire_count input-text">
+                    <input type="text" name="ban_expire_after">
+                </div>				
+                <select class="expire_type input-text" name="ban_expire_after_timespan">
+                    <option value="hour">Hours</option>
+                    <option selected="selected" value="day">Days</option>
+                    <option value="week">Week</option>
+                    <option value="month">Months</option>
+                </select>
+            </div>
+            <div class="form_elem">
+                <input class="form_radio" type="radio" name="ban_type" value="expire_on_date" id="bantype3">
+                <label for="bantype3" class="form_text">Ban will expire on specific date</label>
+            </div>
+            <div class="form_elem_padded">
+                <div class="expire_date input-text">
+                    <input type="text" name="ban_expire_on_date" placeholder="Click to Select">
+                </div>
+            </div>
+            <div class="form_elem">
+                Reason
+            </div>
+            <div class="form_elem_padded">
+                <div class="form_submit">
+                    <div class="element_button">
+                        <div class="l"></div>
+                        <div class="r"></div>
+                        <input class="form_button" type="submit" value="Ok">						
+                    </div>
+                    or
+                    <a class="form_close" href="">Cancel</a>
+                </div>
+                <div class="ban_reason input-text">
+                    <input type="text" name="ban_reason">
+                </div>				
+            </div>
+            <div class="form_elem form_error"></div>
+            <input type="hidden" name="user_id" value="">
+        </form>
+    </div>
+</div>		</div>
+	</div>
+	<div class="clear"></div>
+</div>										        
+
+@@include(".includes/after.html")
