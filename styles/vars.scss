@@ -7,20 +7,22 @@ $normal-text-color: #444;
 $darker-text-color: #000;
 
 $tagsmap: (recruit: 'Recruit',
+           res: 'Reservist',
            grunt: 'Grunt',
            tspc: 'Technical Specialist',
            spc: 'Specialist',
            jrnco: 'JrNCO',
            nco: 'NCO',
-           srnco: 'SrNCO',
+           ssgt: 'SSgt',
            xo: 'XO',
            co: 'CO',
            con: 'Contributor (Gold)',
            trainer: 'Trainer',
            promoter: 'PublicRelations',
-		   designer: 'Designer',
+		       rnd: 'RnD',
+           designer: 'Designer',
            interviewer: 'Interviewer',
-           mission-maker: 'Mission Making - Head',
+           mm: 'Mission Making - Head',
            vmaker: 'Video Making - Head');
 		   
 $socialtagsmap: (irc: 'irc',

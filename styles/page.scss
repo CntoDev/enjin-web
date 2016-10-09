@@ -5,12 +5,13 @@
 
 @mixin tag-classes($suffix: "") {
   &.tag-recruit #{$suffix}{ @include tag("recruit"); }
+  &.tag-res #{$suffix}{ @include tag("res"); }
   &.tag-grunt #{$suffix}{ @include tag("grunt"); }
   &.tag-spc #{$suffix}{ @include tag("spc"); }
   &.tag-tspc #{$suffix}{ @include tag("tspc"); }
   &.tag-jrnco #{$suffix}{ @include tag("jrnco"); }
   &.tag-nco #{$suffix}{ @include tag("nco"); }
-  &.tag-srnco #{$suffix}{ @include tag("srnco"); }
+  &.tag-ssgt #{$suffix}{ @include tag("ssgt"); }
   &.tag-co #{$suffix}{ @include tag("co"); }
   &.tag-xo #{$suffix}{ @include tag("xo"); }
   &.tag-vmaker #{$suffix}{ @include tag("vmaker"); }
@@ -19,8 +20,8 @@
   &.tag-interviewer #{$suffix}{ @include tag("interviewer"); }
   &.tag-promoter #{$suffix}{ @include tag("promoter"); }
   &.tag-trainer #{$suffix}{ @include tag("trainer"); }
-  &.tag-mission-maker #{$suffix}{ @include tag("mission-maker"); }
- 
+  &.tag-mm #{$suffix}{ @include tag("mm"); }
+  &.tag-rnd #{$suffix}{ @include tag("rnd"); }
 }
 
 .cnto-page {
