@@ -1,39 +1,57 @@
-.airborne-ribbon {
-  background: white url("images/ribbons/airborne.jpg") no-repeat 50% 0px;
-  display: block;
-  background-size: 66%;
-  width: 150px;
-  padding: 25px 0 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.qualifications table {
+  tr td {
+    div.pilot-ribbon {
+      background: white url("http://files.enjin.com/821401/styles/images/ribbons/pilot.jpg") no-repeat 5% 0px;
 
-.pilot-ribbon {
-  background: white url("images/ribbons/pilot.jpg") no-repeat 50% 0px;
-  display: block;
-  alignment: center;
-  background-size: 66%;
-  width: 150px;
-  padding: 25px 0 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
+      float: left;
+      display: inline;
+      background-size: 100%;
+      width: 90px;
+      padding: 25px 0 5px;
+      margin-left: 75px;
+      margin-right: 0px;
 
-.op-rs-tod-ribbon {
-  background: white url("images/ribbons/op-rs-tod.jpg") no-repeat 50% 0px;
-  display: block;
-  alignment: center;
-  background-size: 66%;
-  width: 150px;
-  padding: 25px 0 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    }
+    
+    div.airborne-ribbon {
+      background: white url("http://files.enjin.com/821401/styles/images/ribbons/airborne.jpg") no-repeat 5% 0px;
+      float: left;
+      display: inline;
+      background-size: 100%;
+      width: 90px;
+      padding: 25px 0 5px;
+      margin-left: 75px;
+    }
 
-.qualifications table th {
-  width: 33%;
-}
+    div.op-rs-tod-ribbon {
+      background: white url("http://files.enjin.com/821401/styles/images/ribbons/op-rs-tod.jpg") no-repeat 5% 0px;
+      float: left;
+      display: inline;
+      background-size: 100%;
+      width: 90px;
+      padding: 25px 0 5px;
+      margin-left: 75px;
+    }
 
-table tr td.qualification-header {
-  text-align: left;
+  }
+
+  tr td.qualification-header {
+    text-align: center;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  th.qualified-member {
+    width: 33%;
+  }
+  
+  th.ribbon-type {
+    width: 256px;
+  }
+  
+  th.date-qualified {
+    width: 33%;
+  }
 }
