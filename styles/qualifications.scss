@@ -1,40 +1,52 @@
-.qualifications table {
-  tr td {
-    div.pilot-ribbon {
-      background: white url("http://files.enjin.com/821401/styles/images/ribbons/pilot.jpg") no-repeat 5% 0px;
+tr td {
+  div.pilot-ribbon {
+    background: white url("http://files.enjin.com/821401/styles/images/ribbons/pilot.jpg") no-repeat 5% 0px;
 
-      float: left;
-      display: inline;
-      background-size: 100%;
-      width: 90px;
-      padding: 25px 0 5px;
-      margin-left: 75px;
-      margin-right: 0px;
-
-    }
-    
-    div.airborne-ribbon {
-      background: white url("http://files.enjin.com/821401/styles/images/ribbons/airborne.jpg") no-repeat 5% 0px;
-      float: left;
-      display: inline;
-      background-size: 100%;
-      width: 90px;
-      padding: 25px 0 5px;
-      margin-left: 75px;
-    }
-
-    div.op-rs-tod-ribbon {
-      background: white url("http://files.enjin.com/821401/styles/images/ribbons/op-rs-tod.jpg") no-repeat 5% 0px;
-      float: left;
-      display: inline;
-      background-size: 100%;
-      width: 90px;
-      padding: 25px 0 5px;
-      margin-left: 75px;
-    }
-
+    float: left;
+    display: inline;
+    background-size: 100%;
+    width: 90px;
+    padding: 25px 0 5px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+  }
+  
+  div.airborne-ribbon {
+    background: white url("http://files.enjin.com/821401/styles/images/ribbons/airborne.jpg") no-repeat 5% 0px;
+    float: left;
+    display: inline;
+    background-size: 100%;
+    width: 90px;
+    padding: 25px 0 5px;
+    margin-bottom: 2px;
   }
 
+  div.op-rs-tod-ribbon {
+    background: white url("http://files.enjin.com/821401/styles/images/ribbons/op-rs-tod.jpg") no-repeat 5% 0px;
+    float: left;
+    display: inline;
+    background-size: 100%;
+    width: 90px;
+    padding: 25px 0 5px;
+    margin-bottom: 2px;
+  }
+
+}
+
+.decorated-members table {
+  tbody tr th.community-members {
+    width: 200px;
+  }
+  
+  tbody tr th.ribbons {
+  }
+  
+  tr td div {
+      margin-left: 2px;
+  }
+}
+
+.qualifications table {
   tr td.qualification-header {
     text-align: center;
   }
@@ -54,4 +66,9 @@
   th.date-qualified {
     width: 33%;
   }
+  
+  tr td div {
+    margin-left: 75px;
+  }
+
 }
