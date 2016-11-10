@@ -22,6 +22,10 @@
   &.tag-trainer #{$suffix}{ @include tag("trainer"); }
   &.tag-mm #{$suffix}{ @include tag("mm"); }
   &.tag-rnd #{$suffix}{ @include tag("rnd"); }
+  
+  &.tag-qualifications #{$suffix}{ @include tag("qualifications"); }
+  &.tag-training-ribbons #{$suffix}{ @include tag("training-ribbons"); }
+  &.tag-community-rewards #{$suffix}{ @include tag("community-rewards"); }
 }
 
 .cnto-page {
